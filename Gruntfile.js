@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
       jshint: {
-        files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+        files: ['Gruntfile.js', 'public/js/*.js'],
         options: {
           globals: {
             jQuery: true
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         }
       },
       watch: {
-        files: ['<%= jshint.files %>'],
+        files: ['public/**/*.*'],
         tasks: ['jshint']
       },
       w3c_css_validation: {
@@ -24,37 +24,30 @@ module.exports = function(grunt) {
       uglify: {
         my_target: {
           files: {
-            'dest/output.min.js': ['src/input1.js', 'src/input2.js']
+            'public/output.min.js': ['public/js/main.js']
           }
         }
       },
       sass: {                              // Task
         dist: {                            // Target
-          options: {                       // Target options
-            style: 'expanded'
-          },
+          
           files: {                         // Dictionary of files
-            'main.css': 'main.scss',       // 'destination': 'source'
-            'widgets.css': 'widgets.scss'
+            'public/css/main.css': 'public/scss/main.scss'      // 'destination': 'source'
           }
         }
       },
       validation: {
-        options: {
-            reset: grunt.option('reset') || false,
-            stoponerror: false,
-            remotePath: 'http://decodize.com/',
-            remoteFiles: ['html/moving-from-wordpress-to-octopress/',
-                          'css/site-preloading-methods/'], //or
-            remoteFiles: 'validation-files.json', // JSON file contains array of page paths.
-            relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
-        },
+      
         files: {
-            src: ['<%= yeoman.app %>/*.html',
-                  '!<%= yeoman.app %>/index.html',
-                  '!<%= yeoman.app %>/modules.html',
-                  '!<%= yeoman.app %>/404.html']
+            src: ['public/index.html']
         }
+    },
+
+    concat: {
+      dist: {
+        src: ['public/js/lisa.js', 'public/js/lexi.js', 'public/js/joon.js'],
+        dest: 'public/js/main.js',
+      }
     }
 
 
@@ -66,8 +59,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-html-validation');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
   
-    grunt.registerTask('default', ['jshint', 'watch', 'w3c_css_validation', 'uglify', 'sass', 'validation']);
+    grunt.registerTask('default', ['jshint', 'watch', 'w3c_css_validation', 'uglify', 'sass', 'validation', 'concat']);
   
   };
 
