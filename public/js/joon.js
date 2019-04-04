@@ -3,7 +3,7 @@ console.log("hey Joon");
 $(document).ready(function() {
 
 
-var api = 'dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
+var api = 'joonApi';
 var designer1 = 'rafaalvarez';
 var designer2 = 'rafaalvarez';
 var designer2 = 'rafaalvarez';
@@ -27,7 +27,7 @@ var $covers = $("#ProjectCovers");
 
   $.ajax({
     dataType: "jsonp",
-    url: "https://www.behance.net/v2/users/matiascorea/projects?api_key=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM",
+    url: "https://www.behance.net/v2/users/matiascorea/projects?api_key=api",
     success: success
   });
 });
