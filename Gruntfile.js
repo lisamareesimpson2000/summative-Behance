@@ -13,14 +13,6 @@ module.exports = function(grunt) {
         files: ['public/**/*.*'],
         tasks: ['jshint']
       },
-      w3c_css_validation: {
-        options: {
-          // Task-specific options go here.
-        },
-        your_target: {
-          // Target-specific file lists and/or options go here.
-        },
-      },
       uglify: {
         my_target: {
           files: {
@@ -36,13 +28,6 @@ module.exports = function(grunt) {
           }
         }
       },
-      validation: {
-      
-        files: {
-            src: ['public/index.html']
-        }
-    },
-
     concat: {
       dist: {
         src: ['public/js/lisa.js', 'public/js/lexi.js', 'public/js/joon.js'],
@@ -55,14 +40,12 @@ module.exports = function(grunt) {
   
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-w3c-css-validation');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-html-validation');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
   
-    grunt.registerTask('default', ['jshint', 'watch', 'w3c_css_validation', 'uglify', 'sass', 'validation', 'concat']);
+    grunt.registerTask('default', ['jshint', 'watch', 'uglify', 'sass', 'concat']);
   
   };
 
