@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":["../sass/_lisa.scss"],"names":[],"mappings":"AAAA;EACI;;;AAEJ;EACI","file":"main.css"}
-=======
-{"version":3,"sourceRoot":"","sources":["../scss/variables.scss","../scss/global.scss","../scss/_lexi.scss"],"names":[],"mappings":"AAAA;AAIA;ACHA;EACC;EACA;EACA;;;AAGD;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA,kBDZG;ECaH,ODRE;ECSF,aDlBQ;ECmBR;;;AAEJ;EACI;EACA;EACA,aDxBQ;ECyBR;EACA;;;AC3BJ;EACI,OFSE","file":"main.css"}
->>>>>>> 0e06802053832e788ed72c9f9db7e311a9398c54
+{"version":3,"sourceRoot":"","sources":["../sass/_lexi.scss"],"names":[],"mappings":"AAAA;EACI;;;AAEJ;EACI","file":"main.css"}
