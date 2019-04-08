@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         dist: {                            // Target
           
           files: {                         // Dictionary of files
-            'public/css/main.css': 'public/scss/main.scss'      // 'destination': 'source'
+            'public/css/main.css': 'public/sass/main.scss'      // 'destination': 'source'
           }
         }
       },
@@ -42,11 +42,27 @@ module.exports = function(grunt) {
             src: ['public/index.html']
         }
     },
-
     concat: {
+      // options: {
+      //   separator: ';',
+      // },
       dist: {
         src: ['public/js/lisa.js', 'public/js/lexi.js', 'public/js/joon.js'],
         dest: 'public/js/main.js',
+      },
+    },
+    connect: {
+      server: {
+        options: {
+          port: 5000,
+          hostname: 'localhost',
+          onCreateServer: function(server, connect, options) {
+            var io = require('socket.io').listen(server);
+            io.sockets.on('connection', function(socket) {
+              // do something with socket
+            });
+          }
+        }
       }
     }
 
@@ -60,9 +76,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-html-validation');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
   
-    grunt.registerTask('default', ['jshint', 'watch', 'w3c_css_validation', 'uglify', 'sass', 'validation', 'concat']);
+    grunt.registerTask('default', ['sass', 'concat', 'jshint', 'watch', 'uglify', 'validation']);
   
   };
 

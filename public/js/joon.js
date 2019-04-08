@@ -1,1 +1,1 @@
-console.log("hey Joon");
+console.log("hey Joon it's monday");
