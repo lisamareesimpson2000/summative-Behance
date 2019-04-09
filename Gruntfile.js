@@ -28,15 +28,6 @@ module.exports = function(grunt) {
           }
         }
       },
-<<<<<<< HEAD
-      validation: {
-      
-        files: {
-            src: ['public/index.html']
-        }
-    },
-=======
->>>>>>> 0e06802053832e788ed72c9f9db7e311a9398c54
     concat: {
       // options: {
       //   separator: ';',
@@ -72,11 +63,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
 
   
-<<<<<<< HEAD
-    grunt.registerTask('default', ['sass', 'concat', 'jshint', 'watch', 'uglify', 'validation']);
-=======
     grunt.registerTask('default', ['jshint', 'watch', 'uglify', 'sass', 'concat']);
->>>>>>> 0e06802053832e788ed72c9f9db7e311a9398c54
   
   };
 
