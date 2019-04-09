@@ -1,2 +1,1 @@
-
-{"version":3,"sourceRoot":"","sources":["../sass/_lisa.scss", "../sass/_lexi.scss", "../sass/_variables.scss", "../sass/global.scss", "../sass/main.scss"],"names":[],"mappings":"AAAA;EACI;;;AAEJ;EACI","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/_variables.scss","../sass/global.scss","../sass/_lexi.scss"],"names":[],"mappings":"AAAA;AAIA;ACHA;EACC;EACA;EACA;;;AAGD;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA,kBDVG;ECWH,ODNE;ECOF,aDhBQ;ECiBR;;;AAEJ;EACI;EACA;EACA,aDtBQ;ECuBR;EACA;EACA;;;AC1BJ;EACI,kBFSE","file":"main.css"}

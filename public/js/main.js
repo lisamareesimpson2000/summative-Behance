@@ -18,5 +18,29 @@ $.ajax({
         console.log(error);
     }
 });
+
+
+
 console.log("hey lexi");
+
+var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
+
+$.ajax({
+        
+        dataType: 'jsonp',
+        url: 'http://behance.net/v2/users/matiascorea?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
+        type: 'GET',
+        success: function (users) {
+            console.log(users);
+            console.log(users.users.length);
+            for (var i = 0; i < 3; i++){
+                console.log(users.users[i].first_name);
+            }
+            console.log('i am working');
+        },
+        error: function (error) {
+            console.log(error);
+            console.log('something has gone wrong');
+        }
+    });
 console.log("hey Joon it's monday");
