@@ -1,3 +1,67 @@
-body{
-    background-color: aqua;
-}
+@import 'variables';
+
+  #desCont__grad {
+    width: 100%;
+    height: 100%;
+    //background-color: $turq-l;
+    background-image: linear-gradient($turq-l, $dark);
+  }
+  .cont__designer{
+    width: 100%;
+    height: 200px;
+  }
+  .des__details{
+    width: 100%;
+    height: 400px;
+  }
+  .designer__h2--f{
+    font-family: $main-font;
+    color: $dark;
+    font-size: 1em;
+    padding-left: 50px;
+    //float: left;
+  }
+  .img__shadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px $dark;
+  }
+
+  .img-thumbnail{
+  float: right;
+  }
+
+  #footer--lisa{
+    width: 100%;
+    height: 100px;
+    background-color: $pale;
+    font-family: $main-font;
+    color: $wht;
+    font-size: 0.6em;
+  }
+
+
+
+  // .example {
+  //   padding: 20px;
+  //   color: white;
+  // }
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+//   .example {background: red;}
+ }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+//   .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .example {background: orange;}
+// } 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+//   .example {background: pink;}
+ }
