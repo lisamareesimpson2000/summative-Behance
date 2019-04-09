@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+img {
+  width: 200px;
+  height: 500px;
+}
+
 .resize {
   width: 250px;
   height: 600px;
