@@ -1,0 +1,38 @@
+/* FONTS */
+/*MAIN COLOURS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 195px;
+  height: 500px;
+  padding-left: 100px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section--homepage {
+  width: 375px;
+  height: auto;
+  background-color: #1a283e;
+  color: #ffffff;
+  font-family: "Amaranth", regular;
+  display: inline-block;
+}
+
+.buttons {
+  height: 50px;
+  width: 100%;
+  font-family: "Amaranth", regular;
+  padding-left: 95px;
+  font-size: 24px;
+}
+
+.btn {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */
