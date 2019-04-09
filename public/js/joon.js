@@ -18,10 +18,17 @@ var container = $("#BehanceProject");
   }
 
   function insertProject(projectData) {
+    var counter = 1;
 
+    if (counter <= 3) {
+    container.append('<div class="project__item">'+projectData.username+'</div>')
     container.append('<div class="project__item">'+projectData.name+'</div>');
     container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '" >')
-
+    counter += 1
+}
+else{
+  container.append('<br/>'+'<br/>')
+}
   }
 var user= ["matiascorea","lucaviola","raewynbrandon"];
 console.log(user[0],user[1],user[2])
