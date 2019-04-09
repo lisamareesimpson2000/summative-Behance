@@ -5,9 +5,13 @@
 	padding:0;
 }
 
+img {
+    width: 200px;
+    height: 500px;
+}
 
 .resize {
-    width: 300px;
+    width: 250px;
     height: 600px;
     padding-left: 50px;
     margin-left: auto;
@@ -35,5 +39,4 @@
     font-size: 24px;
     color: black;
     margin-left: 40%;
-    // margin-right: auto;
 }

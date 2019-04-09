@@ -7,7 +7,7 @@
 }
 
 .resize {
-  width: 300px;
+  width: 250px;
   height: 600px;
   padding-left: 50px;
   margin-left: auto;
@@ -41,7 +41,8 @@
 }
 
 .btn {
-  background-color: #ffffff;
+  background-color: #000000;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

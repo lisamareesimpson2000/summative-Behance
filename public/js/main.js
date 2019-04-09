@@ -66,12 +66,12 @@ $.ajax({
             // console.log(apiData.user.stats.followers);
             // // followers.push(apiData.user.stats.followers);
             // // console.log(followers);
-            stats[0].name = apiData.user.first_name;
-            stats[0].followers = apiData.user.stats.followers;
-            stats[0].following = apiData.user.stats.following;
-            stats[0].appreciations = apiData.user.stats.appreciations;
-            stats[0].views = apiData.user.stats.views;
-            stats[0].comments = apiData.user.stats.comments;
+            stats[i].name = apiData.user.first_name;
+            stats[i].followers = apiData.user.stats.followers;
+            stats[i].following = apiData.user.stats.following;
+            stats[i].appreciations = apiData.user.stats.appreciations;
+            stats[i].views = apiData.user.stats.views;
+            stats[i].comments = apiData.user.stats.comments;
             // return(apiData.user.stats.followers);
             console.log(stats[0].name);
             console.log(j);
