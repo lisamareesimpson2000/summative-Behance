@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     jshint: {
       files: ['Gruntfile.js', 'public/js/*.js'],
@@ -12,14 +11,6 @@ module.exports = function(grunt) {
     watch: {
       files: ['public/**/*.*'],
       tasks: ['jshint']
-    },
-    w3c_css_validation: {
-      options: {
-        // Task-specific options go here.
-      },
-      your_target: {
-        // Target-specific file lists and/or options go here.
-      },
     },
     uglify: {
       my_target: {
@@ -59,7 +50,6 @@ module.exports = function(grunt) {
         onCreateServer: function(server, connect, options) {
           var io = require('socket.io').listen(server);
           io.sockets.on('connection', function(socket) {
-            // do something with socket
           });
         }
       }
@@ -68,19 +58,16 @@ module.exports = function(grunt) {
 
 
   });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-w3c-css-validation');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-html-validation');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-connect');
+  
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-html-validation');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
 
   grunt.registerTask('default', ['sass', 'concat', 'jshint', 'watch', 'uglify', 'validation']);
 
 };
-
-// grunt.registerTask('default', ['sass']);
