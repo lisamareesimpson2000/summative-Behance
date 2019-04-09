@@ -7,11 +7,11 @@ var container = $("#BehanceProject");
     console.log(data)
      for (var i = 0; i < 3; i++) {
     console.log(data.projects[i]);
-       for (var j = 0; j < 3; j++) {
+       // for (var j = 0; j < 3; j++) {
          var project = data.projects[i];
           console.log(project)
           insertProject(project);
-       }
+       // }
 
      }
 
@@ -20,8 +20,7 @@ var container = $("#BehanceProject");
   function insertProject(projectData) {
 
     container.append('<div class="project__item">'+projectData.name+'</div>');
-    container.append('<div class="project__item">'+projectData.fields+'</div>');
-    container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '">')
+    container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '" >')
 
   }
 var user= ["matiascorea","lucaviola","raewynbrandon"];
