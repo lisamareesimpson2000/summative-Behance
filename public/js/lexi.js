@@ -1,7 +1,6 @@
 console.log("hey lexi");
 
-function ShowStats(){
-    $.ajax({
+$.ajax({
         
         dataType: 'jsonp',
         url: 'http://behance.net/v2/users?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
@@ -19,6 +18,3 @@ function ShowStats(){
             console.log('something has gone wrong');
         }
     });
-}
-
-ShowStats();
