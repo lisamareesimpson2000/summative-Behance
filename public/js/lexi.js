@@ -36,13 +36,23 @@ $.ajax({
         dataType: 'jsonp',
         url: 'http://behance.net/v2/users/' + Desname[i] + '?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
         type: 'GET',
+        async: false,
         success: function (apiData) {
-            console.log(apiData);
-            console.log(apiData.user.first_name);
-            console.log(apiData.user.stats.followers);
-            // followers.push(apiData.user.stats.followers);
-            // console.log(followers);
-            return(apiData.user.stats.followers);
+            // console.log(apiData);
+            // console.log(apiData.user.first_name);
+            // console.log(apiData.user.stats.followers);
+            // // followers.push(apiData.user.stats.followers);
+            // // console.log(followers);
+            stats[i].name = apiData.user.first_name;
+            stats[i].followers = apiData.user.stats.followers;
+            stats[i].following = apiData.user.stats.following;
+            stats[i].appreciations = apiData.user.stats.appreciations;
+            stats[i].views = apiData.user.stats.views;
+            stats[i].comments = apiData.user.stats.comments;
+            // return(apiData.user.stats.followers);
+            console.log(stats[0].name);
+            console.log(j);
+    j += 1;
             
 
 
@@ -56,15 +66,6 @@ $.ajax({
             console.log('something has gone wrong');
         }
     });
-    console.log(stats[j].name);
-            console.log(j);
-   // stats[j].name = apiData.user.first_name;
-            // stats[j].followers = apiData.user.stats.followers;
-      //      stats[j].following = apiData.user.stats.following;
-     //       stats[j].appreciations = apiData.user.stats.appreciations;
-      //      stats[j].views = apiData.user.stats.views;
-       //     stats[j].comments = apiData.user.stats.comments;
-    j += 1;
 }
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
