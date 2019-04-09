@@ -25,8 +25,8 @@ var container = $("#BehanceProject");
     container.append('<div class="project__item">'+projectData.name+'</div>');
     container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '" >')
     counter += 1
-}
-else{
+    }
+    else{
   container.append('<br/>'+'<br/>')
 }
   }
