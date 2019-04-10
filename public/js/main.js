@@ -24,24 +24,24 @@ $.ajax({
 var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
 var stats = [
     {
-        name : "bob" ,
-        followers : 637 ,
+        first_name : "bob" ,
+        followers : "" ,
         following : "",
         appreciations : "",
         views : "",
         comments : ""
     },
     {
-        name : "steve" ,
-        followers : 456 ,
+        first_name : "" ,
+        followers : "" ,
         following : "",
         appreciations : "",
         views : "",
         comments : ""
     },
     {
-        name : "angie" ,
-        followers : 732 ,
+        first_name : "" ,
+        followers : "" ,
         following : "",
         appreciations : "",
         views : "",
@@ -61,12 +61,12 @@ $.ajax({
         type: 'GET',
         async: false,
         success: function (apiData) {
-            // console.log(apiData);
-            // console.log(apiData.user.first_name);
-            // console.log(apiData.user.stats.followers);
-            // // followers.push(apiData.user.stats.followers);
-            // // console.log(followers);
-            stats[i].name = apiData.user.first_name;
+            console.log(apiData);
+            console.log(apiData.user.first_name);
+            console.log(apiData.user.stats.followers);
+            // followers.push(apiData.user.stats.followers);
+            // console.log(followers);
+            stats[i].first_name = user.user.first_name;
             stats[i].followers = apiData.user.stats.followers;
             stats[i].following = apiData.user.stats.following;
             stats[i].appreciations = apiData.user.stats.appreciations;
