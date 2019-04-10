@@ -10,25 +10,47 @@ var container = $("#BehanceProject");
        // for (var j = 0; j < 3; j++) {
          var project = data.projects[i];
           console.log(project)
-          insertProject(project);
+          // insertProject(project);
+          if (i==1) {
+            container.append('<div id="project1" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
+            var projContainer = $("#project1")
+            //  insertProject();
+          } else if (i==1){
+            container.append('<div id="project2" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
+            var projContainer = $("#project2")
+            //  insertProject();
+          } else if (i==1){
+            container.append('<div id="project3" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
+            var projContainer = $("#project3")
+            //  insertProject();
+          }
+
+
+        }
        // }
 
-     }
+    // if (i>1){
+    //   $("#BehanceProject").hide();
+    //   $("#more").click(function(){
+    //     $("#BehanceProject").show().
+    //   })
+    //       }
 
+}
   }
 
   function insertProject(projectData) {
-    var counter = 1;
+  //  var counter = 1;
 
-    if (counter <= 3) {
-    container.append('<div class="project__item">'+projectData.username+'</div>')
-    container.append('<div class="project__item">'+projectData.name+'</div>');
-    container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '" >')
-    counter += 1
-    }
-    else{
-  container.append('<br/>'+'<br/>')
-}
+//    if (counter <= 3) {
+    projContainer.innerHTML=('<div class="project__item">'+projectData.username+'</div>')
+    projContainer.innerHTML=('<div class="project__item">'+projectData.name+'</div>');
+    projContainer.innerHTML=('<div class="project__item">' + '<img src= '+ projectData.covers[404] +' >''</div>')
+    //counter += 1
+    //}
+    //else{
+//  container.append('<br/>'+'<br/>')
+//}
   }
 var user= ["matiascorea","lucaviola","raewynbrandon"];
 console.log(user[0],user[1],user[2])
