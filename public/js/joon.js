@@ -42,7 +42,6 @@ var container = $("#BehanceProject");
   function insertProject(projectData) {
   //  var counter = 1;
 
-<<<<<<< HEAD
 //    if (counter <= 3) {
     projContainer.innerHTML=('<div class="project__item">'+projectData.username+'</div>')
     projContainer.innerHTML=('<div class="project__item">'+projectData.name+'</div>');
@@ -52,25 +51,14 @@ var container = $("#BehanceProject");
     //else{
 //  container.append('<br/>'+'<br/>')
 //}
-=======
-    if (counter <= 3) {
-    container.append('<div class="project__item">'+projectData.owners[0].username+'</div>')
-    // container.append('<div class="project__item">'+projectData.name+'</div>');
-    container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '">')
-    counter += 1
-    }
-    else{
-  container.append('<br/>'+'<br/>')
-}
->>>>>>> 764b8d2224bd0dc4172bd27069aeb1224cb80acf
   }
 var user= ["matiascorea","lucaviola","raewynbrandon"];
 console.log(user[0],user[1],user[2])
 var i;
 for (i=0; i<3; i++){
-  // console.log(i);
-  // console.log(user)
-  // console.log(user[i]);
+  console.log(i);
+  console.log(user)
+  console.log(user[i]);
  var newuser=user[i];
   console.log(newuser);
   var url='https://api.behance.net/v2/users/'+newuser+'/projects?client_id=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
