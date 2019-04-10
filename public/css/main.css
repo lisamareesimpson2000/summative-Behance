@@ -52,4 +52,8 @@
   text-align: center;
 }
 
+#dashboard_div {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
 var stats = [
     {
-        "first_name": "bob" ,
+        "first_name": "" ,
         "followers": 653 ,
         "following": 7554,
         "appreciations": 13644,
@@ -9,7 +9,7 @@ var stats = [
         "comments": 100
     },
     {
-        "first_name": "alan" ,
+        "first_name": "" ,
         "followers": 5755 ,
         "following": "",
         "appreciations": "",
@@ -17,7 +17,7 @@ var stats = [
         "comments": ""
     },
     {
-        "first_name": "paul" ,
+        "first_name": "" ,
         "followers": 4554 ,
         "following": "",
         "appreciations": "",
@@ -47,7 +47,7 @@ $.ajax({
             stats[j].followers = apiData.user.stats.followers;
             stats[j].following = apiData.user.stats.following;
             stats[j].appreciations = apiData.user.stats.appreciations;
-            stats[j].views = apiData.user.stats.views
+            stats[j].views = apiData.user.stats.views;
             stats[j].comments = apiData.user.stats.comments;
             // return(apiData.user.stats.followers);
             console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
@@ -89,7 +89,7 @@ title: 'behance followers'
 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
 chart.draw(data, options);
-singleDesigner()
+singleDesigner();
 }
 
 
