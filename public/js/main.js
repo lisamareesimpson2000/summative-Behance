@@ -20,8 +20,8 @@ $.ajax({
         console.log(behance_data.user.fields);
         console.log(behance_data.user.images[138]);
 
-       document.getElementById("des__details").innerHTML += '<div class="cont__designer row text-centre"><p class="designer__h2--f col-12">' + behance_data.user.first_name + ' ' + behance_data.user.last_name +'</p><div>' + 
-        '<p class="designer__h2--f">' + behance_data.user.occupation + '</p>' 
+       document.getElementById("des__details").innerHTML+= '<div class="cont__designer row text-centre"><p class="designer__h2--f col-12">' + behance_data.user.first_name + ' ' + behance_data.user.last_name +'</p>' + 
+        '<p class="designer__h2--f">' + behance_data.user.occupation + '</p></div>';
         //+
         //'<div class="col-lg-6"><img class="img-thumbnail img__shadow" src = "' + behance_data.user.images[138] + '" alt="profile photo"></div>';
        
@@ -36,5 +36,6 @@ $.ajax({
 
 }
 //loop is closed
-console.log("hey lexi");
-console.log("hey Joon");
+
+
+console.log("hey Joon it's monday");

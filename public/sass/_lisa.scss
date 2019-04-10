@@ -1,5 +1,6 @@
 @import 'variables';
 
+// ID
   #desCont__grad {
     width: 100%;
     height: 100%;
@@ -7,8 +8,22 @@
     background-image: linear-gradient($turq-l, $dark);
   }
   #logo__behance{
-    width: 70px;
+    width: 50%;
+    padding-top: 20px;
   }
+  #footer--lisa{
+    width: 100%;
+    height: 100px;
+    background-color: $pale;
+  }
+  #footer__copy{
+    font-family: $main-font;
+    color: $wht;
+    font-size: 0.6em;
+    padding-top: 40px;
+  }
+
+// CLASSES
   .cont__designer{
     width: 100%;
     height: 200px;
@@ -34,15 +49,25 @@
   float: right;
   }
 
-  #footer--lisa{
-    width: 100%;
-    height: 100px;
-    background-color: $pale;
-    font-family: $main-font;
-    color: $wht;
-    font-size: 0.6em;
-  }
-
+ // FOOTER
+.pbyB {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.cont__logo--behance {
+  position: relative;
+  width: 50%;
+}
+.cont__logo--behance:hover .pbyB {
+  opacity: 0.3;
+}
+.cont__logo--behance:hover {
+  opacity: 1;
+}
 
 
   // .example {
@@ -52,6 +77,9 @@
  /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 //   .example {background: red;}
+  #logo__behance{
+    width: 100%;
+  }
  }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -67,4 +95,15 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 //   .example {background: pink;}
- }
+#logo__behance{
+  width: 40%;
+}
+  #footer--lisa{
+    width: 100%;
+    height: 150px;
+    font-size: 1.6em;
+  }
+  #footer__copy{
+    padding-top: 60px;
+  }
+}
