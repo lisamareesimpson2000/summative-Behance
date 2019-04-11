@@ -43,7 +43,7 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-             stats[j].first_name = apiData.user.first_name;
+            stats[j].first_name = apiData.user.first_name;
             stats[j].followers = apiData.user.stats.followers;
             stats[j].following = apiData.user.stats.following;
             stats[j].appreciations = apiData.user.stats.appreciations;
