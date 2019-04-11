@@ -106,7 +106,18 @@ data.addColumn('string','Name');
           } //arraytodatatable
 
 var options = {
-title: 'behance followers'
+title: 'behance followers',
+chartArea:{
+  left:80,
+  top:5,
+  width:'70%',
+  height:'90%'
+},
+is3D: true, 
+pieSliceBorderColor:  '#b5d3dd',
+backgroundColor: {
+  fill: 'blue'
+}
 };
 
 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -119,7 +130,7 @@ singleDesigner();
 function singleDesigner() {
 
     var data = google.visualization.arrayToDataTable([
-        ['stats', 'luca', { role: 'style' }],
+        ['stats', 'number', { role: 'style' }],
         ['followers', stats[0].followers , '#b87333'],            // RGB value
         ['following', stats[0].following, 'silver'],            // English color name
         ['appreciations', stats[0].appreciations, 'gold'],
@@ -144,8 +155,8 @@ function singleDesigner() {
         'chartType': 'BarChart',
         'containerId': 'barchart',
         'options': {
-          'width': 300,
-          'height': 200,
+          'width': 500,
+          'height': 300,
           'barText': 'value',
           'legend': 'right'
         }
@@ -170,4 +181,6 @@ $(document).ready(function(){
     $('#dashboard_div').hide();
   });
 });
+
+
 console.log("hey Joon it's monday");

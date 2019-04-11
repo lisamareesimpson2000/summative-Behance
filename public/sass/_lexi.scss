@@ -3,39 +3,59 @@
 .btn {
     text-align: center;
 }
-#dashboard_div {
-    // display: inline-block;
-    display: flex;
-}
 
 #filter_div {
-    width: 300px; 
+    width: 100%; 
     height: 100px;
-    display: flex;
+    // display: flex;
 }
 
 #piechart {
-    width: 300px; 
-    height: 200px;
-    display: flex;
+    width: 100%; 
+    height: 300px;
+    // display: flex;
 }
 
 #barchart {
-    padding-left: 20px;
-    display: flex;
+    width: 100%; 
+    height: 300px;
+    // padding-left: 20px;
+    // display: flex;
 }
 
 #dashboard_div {
-    width: 700px; 
-    height: 500px;
+    width: 100%; 
+    height: 700px;
+    background-color:  $pale;
+
 }
 
 #myModal {
-    height: 500px;
-    width: 700px;;
+    height: 700px;
+    width: 100%;
     background-color:  $turq-l;
 }
 
 .close {
     color: $wht;
 }
+
+@media only screen and (min-width: 600px) {
+    #piechart {
+        width: 50%; 
+        height: 300px;
+        float: left;
+        padding-right: 50px; 
+    }
+    
+    #barchart {
+        width: 50%; 
+        height: 300px;
+        float: left;
+    }
+    #dashboard_div::after {
+        clear: both;
+        display: table;
+        content: '';
+    }
+  }
