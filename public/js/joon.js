@@ -1,76 +1,76 @@
-$(document).ready(function() {
-
-var container = $("#BehanceProject");
-
-  function success(data) {
-
-    console.log(data)
-     for (var i = 0; i < 3; i++) {
-    console.log(data.projects[i]);
-       // for (var j = 0; j < 3; j++) {
-         var project = data.projects[i];
-          console.log(project)
-          // insertProject(project);
-          if (i==1) {
-            container.append('<div id="project1" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
-            var projContainer = $("#project1")
-            //  insertProject();
-          } else if (i==1){
-            container.append('<div id="project2" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
-            var projContainer = $("#project2")
-            //  insertProject();
-          } else if (i==1){
-            container.append('<div id="project3" style="height: 300px; width: 300px; background:red;">'+'test'+'</div>')
-            var projContainer = $("#project3")
-            //  insertProject();
-          }
 
 
-        }
-       // }
+var container = $("#BehanceProject");//pink
 
-    // if (i>1){
-    //   $("#BehanceProject").hide();
-    //   $("#more").click(function(){
-    //     $("#BehanceProject").show().
-    //   })
-    //       }
 
-}
-  }
 
-  function insertProject(projectData) {
-  //  var counter = 1;
-
-//    if (counter <= 3) {
-    projContainer.innerHTML=('<div class="project__item">'+projectData.username+'</div>')
-    projContainer.innerHTML=('<div class="project__item">'+projectData.name+'</div>');
-    projContainer.innerHTML=('<div class="project__item">' + '<img src= '+ projectData.covers[404] +' >''</div>')
-    //counter += 1
-    //}
-    //else{
-//  container.append('<br/>'+'<br/>')
-//}
-  }
 var user= ["matiascorea","lucaviola","raewynbrandon"];
 console.log(user[0],user[1],user[2])
 var i;
 for (i=0; i<3; i++){
   console.log(i);
-  console.log(user)
-  console.log(user[i]);
- var newuser=user[i];
-  console.log(newuser);
-  var url='https://api.behance.net/v2/users/'+newuser+'/projects?client_id=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
+
+  var url='https://api.behance.net/v2/users/'+user[i]+'/projects?client_id=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
   console.log(url);
   $.ajax({
     url: url,
     dataType: "jsonp",
     type: "GET",
-    success: success,
-    error:function(){
+    success: function(data){
+
+      console.log(data);
+       for (var j= 0; j < 3; j++) {
+         console.log(j);
+         console.log(data.projects[j]);
+
+            var project = data.projects[j];
+             console.log(project);
+             // if (j>0){
+             //   $("#project2, #project3").hide();
+             //  $("#more").click(function(){
+             //    $("#project2, #project3").show().
+             //  })
+             //      }
+
+
+             if (j==0) {
+              container.append('<div id="project1" style="height: 20%; width: 100%; border: blue 1px solid;"></div>')
+
+
+            var   projContainer1 = document.getElementById('project1')
+               projContainer1.innerHTML +=('<div style="height: 30px; width: 300px;" class="project__item">'+project.username+'</div>')
+                 projContainer1.innerHTML +=('<div style="height: 30px; width: 400px;" class="project__item">'+project.name+'</div>')
+                  projContainer1.innerHTML +=('<div style="height: 160px; width: 300px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+
+              console.log(projContainer1);
+
+
+             } else if (j==1){
+
+              container.append('<div id="project2" style="height: 20%; width: 100%; border: red 1px solid;"></div>')
+              var projContainer2 = document.getElementById('project2')
+              projContainer2.innerHTML +=('<div style="height: 30px; width: 300px;" class="project__item">'+project.username+'</div>')
+                projContainer2.innerHTML +=('<div style="height: 70px; width: 300px;" class="project__item">'+project.name+'</div>')
+                 projContainer2.innerHTML +=('<div style="height: 270px; width: 300px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                  console.log(projContainer2);
+
+            } else if (j==2){
+              container.append('<div id="project3" style="height: 20%; width: 100%; border: green 1px solid; "></div>')
+              var projContainer3 = document.getElementById('project3')
+
+              projContainer3.innerHTML +=('<div style="height: 100px; width: 300px;" class="project__item">'+project.username+'</div>')
+                projContainer3.innerHTML +=('<div style="height: 110px; width: 300px;" class="project__item">'+project.name+'</div>')
+                 projContainer3.innerHTML +=('<div style="height: 340px; width: 300px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+
+            console.log(projContainer3);
+            }
+
+
+}//for
+
+}, //success
+    error:function(error){
       console.log('error');
     }
   });
 }
-});
