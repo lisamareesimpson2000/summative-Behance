@@ -1,26 +1,41 @@
+@import 'variables';
+
 .btn {
     text-align: center;
 }
 #dashboard_div {
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
 }
 
 #filter_div {
     width: 300px; 
-    height: 300px;
+    height: 100px;
+    display: flex;
 }
 
 #piechart {
-    width: 500px; 
-    height: 500px;
+    width: 300px; 
+    height: 200px;
+    display: flex;
 }
 
 #barchart {
-    width: 500px; 
-    height: 500px;
+    padding-left: 20px;
+    display: flex;
 }
 
 #dashboard_div {
-    width: 900px; 
-    height: 900px;
+    width: 700px; 
+    height: 500px;
+}
+
+#myModal {
+    height: 500px;
+    width: 700px;;
+    background-color:  $turq-l;
+}
+
+.close {
+    color: $wht;
 }

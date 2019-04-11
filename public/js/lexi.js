@@ -121,9 +121,9 @@ function singleDesigner() {
         'chartType': 'BarChart',
         'containerId': 'barchart',
         'options': {
-          'width': 500,
-          'height': 500,
-          'pieSliceText': 'value',
+          'width': 300,
+          'height': 200,
+          'barText': 'value',
           'legend': 'right'
         }
       });
@@ -135,3 +135,15 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
+
+
+$(document).ready(function(){
+  $('#infobtn').click(function(){
+    $('#myModal').show();
+    $('#dashboard_div').show();
+  });
+  $('.close').click(function(){
+    $('#myModal').hide();
+    $('#dashboard_div').hide();
+  });
+});

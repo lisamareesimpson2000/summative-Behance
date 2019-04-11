@@ -66,7 +66,7 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-             stats[j].first_name = apiData.user.first_name;
+            stats[j].first_name = apiData.user.first_name;
             stats[j].followers = apiData.user.stats.followers;
             stats[j].following = apiData.user.stats.following;
             stats[j].appreciations = apiData.user.stats.appreciations;
@@ -119,7 +119,7 @@ singleDesigner();
 function singleDesigner() {
 
     var data = google.visualization.arrayToDataTable([
-        ['stats', 'number', { role: 'style' }],
+        ['stats', 'luca', { role: 'style' }],
         ['followers', stats[0].followers , '#b87333'],            // RGB value
         ['following', stats[0].following, 'silver'],            // English color name
         ['appreciations', stats[0].appreciations, 'gold'],
@@ -144,9 +144,9 @@ function singleDesigner() {
         'chartType': 'BarChart',
         'containerId': 'barchart',
         'options': {
-          'width': 500,
-          'height': 500,
-          'pieSliceText': 'value',
+          'width': 300,
+          'height': 200,
+          'barText': 'value',
           'legend': 'right'
         }
       });
@@ -158,4 +158,16 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
+
+
+$(document).ready(function(){
+  $('#infobtn').click(function(){
+    $('#myModal').show();
+    $('#dashboard_div').show();
+  });
+  $('.close').click(function(){
+    $('#myModal').hide();
+    $('#dashboard_div').hide();
+  });
+});
 console.log("hey Joon it's monday");

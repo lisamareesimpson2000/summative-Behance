@@ -48,12 +48,46 @@
   height: 40px;
 }
 
+/* FONTS */
+/*MAIN COLOURS */
 .btn {
   text-align: center;
 }
 
 #dashboard_div {
-  display: inline-block;
+  display: flex;
+}
+
+#filter_div {
+  width: 300px;
+  height: 100px;
+  display: flex;
+}
+
+#piechart {
+  width: 300px;
+  height: 200px;
+  display: flex;
+}
+
+#barchart {
+  padding-left: 20px;
+  display: flex;
+}
+
+#dashboard_div {
+  width: 700px;
+  height: 500px;
+}
+
+#myModal {
+  height: 500px;
+  width: 700px;
+  background-color: #04adbf;
+}
+
+.close {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */
