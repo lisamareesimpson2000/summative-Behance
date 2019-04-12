@@ -1,0 +1,141 @@
+@import 'variables';
+
+// ID
+  #desCont__grad {
+    width: 100%;
+    height: 100%;
+    //background-color: $turq-l;
+    background-image: linear-gradient($turq-l, $dark);
+  }
+  #logo__behance{
+    width: 50%;
+    padding-top: 20px;
+  }
+  // #logo__behance{
+  //   width: 100%;
+  // }
+  #footer--lisa{
+    width: 100%;
+    height: 100px;
+    background-color: $pale;
+  }
+  #footer__copy{
+    font-family: $main-font;
+    color: $wht;
+    font-size: 0.6em;
+    padding-top: 40px;
+  }
+  #des__details{
+  width: 100%;
+  height: 300px;
+  }
+
+// CLASSES
+.section--lisa{
+  width: 100%;
+  height: 900px;
+  background-color: aqua;
+}
+  // .cont__designer{
+  //   width: 100%;
+  //   height: 200px;
+  // }
+
+  // .des__details--img{
+  //   width: 50%;
+  //   height: 400px;
+  // }
+  .designer__h2--f{
+    font-family: $main-font;
+    color: $dark;
+    font-size: 1em;
+    // padding-left: 50px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    //float: left;
+  }
+  .img__shadow {
+    border: 1px solid;
+    // padding: 10px;
+    box-shadow: 5px 10px 8px $dark;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  // .img-thumbnail{
+  // float: right;
+  // }
+
+ // FOOTER
+.pbyB {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.cont__logo--behance {
+  position: relative;
+  width: 50%;
+}
+.cont__logo--behance:hover .pbyB {
+  opacity: 0.3;
+}
+.cont__logo--behance:hover {
+  opacity: 1;
+}
+
+.user-row{
+  height: 300px;
+  width: 100%;
+  background-color: brown;
+}
+.text-row{
+  height: 100px;
+  width: 100%;
+  background-color:red;
+}
+.img-row{
+  height: 200px;
+  width: 100%;
+  background-color: yellow;
+  display: block;
+  margin: auto;
+}
+
+
+  // .example {
+  //   padding: 20px;
+  //   color: white;
+  // }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+//   .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .example {background: orange;}
+// } 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 800px) {
+//   .example {background: pink;}
+#logo__behance{
+  width: 40%;
+}
+  #footer--lisa{
+    width: 100%;
+    height: 150px;
+    font-size: 1.6em;
+  }
+  #footer__copy{
+    padding-top: 60px;
+  }
+}
