@@ -1,14 +1,15 @@
 @import 'variables';
+// @import 'node_modules/bootstrap/scss/bootstrap.scss';
 * {
 	box-sizing: border-box;
 	margin:0;
 	padding:0;
 }
-
-img {
-    width: 200px;
-    height: 500px;
-}
+//can't have global img size will effect all images :)
+// img {
+//     width: 200px;
+//     height: 500px;
+// }
 
 .resize {
     width: 250px;

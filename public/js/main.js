@@ -1,17 +1,60 @@
-console.log("working");
+// console.log("working");
+var desName = ['matiascorea', 'lucaviola', 'raewynbrandon'];
+var j = desName[0];
+console.log(j);
+var len = desName.length;
+var firstDes = ['matiascorea'];
+
+for (var i = 0; i < desName.length; i++){
+console.log(desName);
+
+
 $.ajax({
     dataType: 'jsonp',
-    url: 'https://api.behance.net/v2/users//matiascorea/projects?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
+    url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
     // url: 'http://behance.net/v2/users?api_key=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
     type: 'GET',
-    success: function (behance__data) {
-        console.log(behance__data);
-        // console.log(behance__data.users.length);
-        //console.log(behance__data.users.matiascorea);
+    async: false,
+    success: function (behance_data) {
+        console.log(behance_data);
+        // console.log(behance_data.users.length);
+        console.log(behance_data.user.first_name);
+        console.log(behance_data.user.last_name);
+        console.log(behance_data.user.occupation);
+        console.log(behance_data.user.fields);
+        console.log(behance_data.user.images[138]);
 
-        for (var i = 0; i < 3; i++){
-            console.log(behance__data.users[i].first_name);
-        }
+        // if (behance_data.user.first_name < 10) {
+        //     des1 = "Matias Corea";
+        //   } else if (behance_data.user.first_name < 8) {
+        //     des2 = "Luka Viola";
+        //   }
+        //   else {
+        //     des3 = "Raewyn Brandon";
+        //   }
+        // console.log(des1)
+        // console.log(des2)
+        // console.log(des3)
+
+        //TRYING TO GET FIRST NAME INDIVIDUALLY FOR STYLING - COLUMNS to sit right
+
+        // var desObj, x;
+        // desObj = {"name":"John", "age":30, "car":null};
+        // x = desObj.name;
+        // document.getElementById("demo").innerHTML = x;
+
+
+        document.getElementById("des__details").innerHTML+= '<div class="user-row"><div class="text-row"><p class="designer__h2--f">' + behance_data.user.first_name + ' ' + behance_data.user.last_name +'</p>' + 
+        '<br>'+'<p class="designer__h2--f">' + behance_data.user.occupation + '</p></div>'
+        +
+        '<div class="img-row"><img class="img-thumbnail img__shadow" src = "' + behance_data.user.images[138] + '" alt="profile photo"></div></div>';
+       
+    //    document.getElementById("des__details--img").innerHTML += '<div class="cont__des--image"><img class="img-thumbnail img__shadow col" src = "' + behance_data.user.images[138] + '" alt="profile photo"</div>';
+       //document.getElementById("des__details--img").innerHTML += '<img class="img-thumbnail img__shadow" src = "' + behance_data.user.images[138] + '" alt="profile photo" style="width:200px; height:200px;">';
+    
+    
+    
+    
     },
     error: function (error) {
 
@@ -19,98 +62,7 @@ $.ajax({
     }
 });
 
-
-
-var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
-var stats = [
-    {
-        name : "bob" ,
-        followers : 637 ,
-        following : "",
-        appreciations : "",
-        views : "",
-        comments : ""
-    },
-    {
-        name : "steve" ,
-        followers : 456 ,
-        following : "",
-        appreciations : "",
-        views : "",
-        comments : ""
-    },
-    {
-        name : "angie" ,
-        followers : 732 ,
-        following : "",
-        appreciations : "",
-        views : "",
-        comments : ""
-    }
-];
-
-var j = 0;
-for ( var i = 0 ; i < Desname.length; i++) {
-    
-
-
-$.ajax({
-        
-        dataType: 'jsonp',
-        url: 'http://behance.net/v2/users/' + Desname[i] + '?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
-        type: 'GET',
-        async: false,
-        success: function (apiData) {
-            // console.log(apiData);
-            // console.log(apiData.user.first_name);
-            // console.log(apiData.user.stats.followers);
-            // // followers.push(apiData.user.stats.followers);
-            // // console.log(followers);
-            stats[i].name = apiData.user.first_name;
-            stats[i].followers = apiData.user.stats.followers;
-            stats[i].following = apiData.user.stats.following;
-            stats[i].appreciations = apiData.user.stats.appreciations;
-            stats[i].views = apiData.user.stats.views;
-            stats[i].comments = apiData.user.stats.comments;
-            // return(apiData.user.stats.followers);
-            console.log(stats[0].name);
-            console.log(j);
-    j += 1;
-            
-
-
-        
-            
-
-
-        },
-        error: function (error) {
-            console.log(error);
-            console.log('something has gone wrong');
-        }
-    });
 }
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+//loop is closed
 
-function drawChart() {
 
-var data = new google.visualization.DataTable();
-data.addColumn('string','Name');
-       data.addColumn('number','Followers');
-       for (var i = 0; i < stats.length; i++) {
-          data.addRow([
-                    stats[i].name,
-                    stats[i].followers
-                    ]);
-          } //arraytodatatable
-
-var options = {
-title: 'behance followers'
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-chart.draw(data, options);
-}
-console.log("hey Joon it's monday");

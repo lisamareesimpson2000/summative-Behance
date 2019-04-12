@@ -45,4 +45,121 @@
   text-align: center;
 }
 
+/* FONTS */
+/*MAIN COLOURS */
+#desCont__grad {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#04adbf, #1a283e);
+}
+
+#logo__behance {
+  width: 50%;
+  padding-top: 20px;
+}
+
+#footer--lisa {
+  width: 100%;
+  height: 100px;
+  background-color: #b5d3dd;
+}
+
+#footer__copy {
+  font-family: "Amaranth", regular;
+  color: #ffffff;
+  font-size: 0.6em;
+  padding-top: 40px;
+}
+
+#des__details {
+  width: 100%;
+  height: 300px;
+}
+
+.section--lisa {
+  width: 100%;
+  height: 900px;
+  background-color: aqua;
+}
+
+.designer__h2--f {
+  font-family: "Amaranth", regular;
+  color: #1a283e;
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.img__shadow {
+  border: 1px solid;
+  box-shadow: 5px 10px 8px #1a283e;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+.pbyB {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.cont__logo--behance {
+  position: relative;
+  width: 50%;
+}
+
+.cont__logo--behance:hover .pbyB {
+  opacity: 0.3;
+}
+
+.cont__logo--behance:hover {
+  opacity: 1;
+}
+
+.user-row {
+  height: 300px;
+  width: 100%;
+  background-color: brown;
+}
+
+.text-row {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+}
+
+.img-row {
+  height: 200px;
+  width: 100%;
+  background-color: yellow;
+  display: block;
+  margin: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 800px) {
+  #logo__behance {
+    width: 40%;
+  }
+
+  #footer--lisa {
+    width: 100%;
+    height: 150px;
+    font-size: 1.6em;
+  }
+
+  #footer__copy {
+    padding-top: 60px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

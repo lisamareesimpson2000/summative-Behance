@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>360 Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -15,28 +19,35 @@
 	<div class="container-fluid">
 
             <!--SECTION 1 - HOMEPAGE-->
-            <div id="" class="section section--homepage">
-                <div class="resize">
-                    <img src="images/360-log.svg">
+            <!-- <div id="" class="section section--homepage">
+                <img id="logo" src="images/360-logo-white-.png">
+                <div class="buttons">
+                <button class="btn btn-primary btn-md">Our Work</button>
+                <button class="btn btn-primary btn-md">Our people</button>
                 </div>
-                <div id="holder">
-                    <div class="buttons">
-                        <button class="btn btn-primary btn-md">Our Work</button>
-                        <button class="btn btn-primary btn-md">Our people</button>
-                    </div>
-                </div>
-            </div>
+            </div> -->
             <!--HOMEPAGE-->
 
             <!--SECTION 2 - LEXI-->
-            <div id="lexi" class="section section--lexi">
+            <!-- <div id="lexi" class="section section--lexi">
                 <div id="piechart" style="width: 900px; height: 500px;" ></div>
-            </div>
+            </div> -->
             <!--LEXI-->
 
             <!--SECTION 3 - LISA-->
-            <div id="lisa" class="section section--lisa"></div>
-            <!--LISA-->
+            <div id="lisa" class="section section--lisa">
+                <div class="container-fluid">
+                    
+                            <div id="des__details">
+                            </div>
+                            <!-- <div id="des__details--img">
+                            </div> -->
+                        <!-- END ROW 1 -->
+                   
+                    <!-- END CONTAINER -->
+                </div>
+                <!--LISA-->
+            </div>
 
             <!--SECTION 4 - JOON-->
             <div id="joon" class="section section--joon centered">
@@ -53,8 +64,17 @@
             <!--JOON-->
 
             <!--SECTION 5 - FOOTER-->
-            <div id="" class="section section--footer">
-
+            <div class="section section--footer container-fluid">
+                <div id="footer--lisa" class="row">
+                    <div class="cont__logo--behance col-6">
+                        <a href="https://www.behance.net/dev" target="_blank">
+                            <img id="logo__behance" class="pbyB" src="images/PbyBehance.png" alt="powered by behance">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <p id="footer__copy">&copy; 2019 Lexi, Joon and Lisa </p>
+                    </div>
+                </div>
             </div>
             <!--FOOTER-->
 
@@ -69,5 +89,12 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    
+    <script src="js/main.js"></script>
+    
 </body>
 </html>
