@@ -19,19 +19,43 @@
 	<div class="container-fluid">
 
             <!--SECTION 1 - HOMEPAGE-->
-            <!-- <div id="" class="section section--homepage">
-                <img id="logo" src="images/360-logo-white-.png">
-                <div class="buttons">
-                <button class="btn btn-primary btn-md">Our Work</button>
-                <button class="btn btn-primary btn-md">Our people</button>
+            <div id="" class="section section--homepage">
+                <div class="resize">
+                    <img id="logo" src="images/360-log.svg">
+                </div>
+                <div id="holder">
+                    <div class="buttons">
+                        <button class="btn btn-primary big-btn" id="infobtn" data-toggle="modal" data-target="#myModal">Our Work</button>
+                        <button class="btn btn-primary big-btn">Our people</button>
+                        <!-- <input type="submit" id="searchbtn" class="btn-flat col m2 s12" value="search">
+                        <input type="reset" id="searchbtn" class="btn-flat col m2 s12 right" value="clear"  style="margin-top:3px;"> -->
+                    </div>
                 </div>
             </div> -->
             <!--HOMEPAGE-->
-
+            <!-- <div class="row"></div> -->
+    
             <!--SECTION 2 - LEXI-->
-            <!-- <div id="lexi" class="section section--lexi">
-                <div id="piechart" style="width: 900px; height: 500px;" ></div>
-            </div> -->
+            <div id="lexi" class="section section--lexi">
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">User Statistics</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="dashboard_div">
+                                        <div class="col-xs-4 col-sm-12 col-lg-4" id="filter_div"></div>
+                                        <div class="col-xs-4 col-sm-12 col-lg-4" id="piechart"></div>
+                                        <div class="col-xs-4 col-sm-12 col-lg-4" id="barchart" ></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--LEXI-->
 
             <!--SECTION 3 - LISA-->
