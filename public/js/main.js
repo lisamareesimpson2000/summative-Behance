@@ -66,8 +66,6 @@ $.ajax({
 //loop is closed
 
 
-<<<<<<< HEAD
-=======
 var options = {
 title: 'behance followers'
 };
@@ -75,7 +73,6 @@ title: 'behance followers'
 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
 chart.draw(data, options);
-}
 $(document).ready(function() {
 
 var container = $("#BehanceProject");
@@ -130,4 +127,3 @@ for (i=0; i<3; i++){
   });
 }
 });
->>>>>>> joon
