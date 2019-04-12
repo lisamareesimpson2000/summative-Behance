@@ -231,3 +231,65 @@ console.log("hey Joon it's monday");
 //loop is closed
 
 
+var options = {
+title: 'behance followers'
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+chart.draw(data, options);
+
+$(document).ready(function() {
+
+var container = $("#BehanceProject");
+
+  function success(data) {
+
+    console.log(data)
+     for (var i = 0; i < 3; i++) {
+    console.log(data.projects[i]);
+       // for (var j = 0; j < 3; j++) {
+         var project = data.projects[i];
+          console.log(project)
+          insertProject(project);
+       // }
+
+     }
+
+  }
+
+  function insertProject(projectData) {
+    var counter = 1;
+
+    if (counter <= 3) {
+    container.append('<div class="project__item">'+projectData.owners[0].username+'</div>')
+    // container.append('<div class="project__item">'+projectData.name+'</div>');
+    container.append('<div class="project__item">' + '<img src= "' + projectData.covers[404] + '">')
+    counter += 1
+    }
+    else{
+  container.append('<br/>'+'<br/>')
+}
+  }
+var user= ["matiascorea","lucaviola","raewynbrandon"];
+console.log(user[0],user[1],user[2])
+var i;
+for (i=0; i<3; i++){
+  // console.log(i);
+  // console.log(user)
+  // console.log(user[i]);
+ var newuser=user[i];
+  console.log(newuser);
+  var url='https://api.behance.net/v2/users/'+newuser+'/projects?client_id=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
+  console.log(url);
+  $.ajax({
+    url: url,
+    dataType: "jsonp",
+    type: "GET",
+    success: success,
+    error:function(){
+      console.log('error');
+    }
+  });
+}
+});
