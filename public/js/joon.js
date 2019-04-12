@@ -1,1 +1,0 @@
-console.log("hey Joon it's monday");

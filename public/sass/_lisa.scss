@@ -11,6 +11,9 @@
     width: 50%;
     padding-top: 20px;
   }
+  // #logo__behance{
+  //   width: 100%;
+  // }
   #footer--lisa{
     width: 100%;
     height: 100px;
@@ -22,36 +25,50 @@
     font-size: 0.6em;
     padding-top: 40px;
   }
+  #des__details{
+  width: 100%;
+  height: 300px;
+  }
 
 // CLASSES
-  .cont__designer{
-    width: 100%;
-    height: 200px;
-  }
-  .des__details{
-    width: 50%;
-    height: 400px;
-  }
-  .des__details--img{
-    width: 50%;
-    height: 400px;
-  }
+.section--lisa{
+  width: 100%;
+  height: 900px;
+  background-color: aqua;
+}
+  // .cont__designer{
+  //   width: 100%;
+  //   height: 200px;
+  // }
+
+  // .des__details--img{
+  //   width: 50%;
+  //   height: 400px;
+  // }
   .designer__h2--f{
     font-family: $main-font;
     color: $dark;
     font-size: 1em;
-    padding-left: 50px;
+    // padding-left: 50px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
     //float: left;
   }
   .img__shadow {
     border: 1px solid;
-    padding: 10px;
+    // padding: 10px;
     box-shadow: 5px 10px 8px $dark;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
   }
 
-  .img-thumbnail{
-  float: right;
-  }
+  // .img-thumbnail{
+  // float: right;
+  // }
 
  // FOOTER
 .pbyB {
@@ -73,21 +90,32 @@
   opacity: 1;
 }
 
+.user-row{
+  height: 300px;
+  width: 100%;
+  background-color: brown;
+}
+.text-row{
+  height: 100px;
+  width: 100%;
+  background-color:red;
+}
+.img-row{
+  height: 200px;
+  width: 100%;
+  background-color: yellow;
+  display: block;
+  margin: auto;
+}
+
 
   // .example {
   //   padding: 20px;
   //   color: white;
   // }
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-//   .example {background: red;}
-  #logo__behance{
-    width: 100%;
-  }
- }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
 //   .example {background: blue;}
 } 
 
@@ -97,7 +125,7 @@
 // } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) {
 //   .example {background: pink;}
 #logo__behance{
   width: 40%;
