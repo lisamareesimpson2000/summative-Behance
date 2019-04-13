@@ -1,20 +1,32 @@
-// .img-center {margin:0 auto;}
-
-// .img-responsive {
-//      margin: 0 auto;
-//  }
-
-// .float {
-//   float: right;
-// }
-.project__item{
-  float: left;
+#behance-project{
+  width:100%;
+  height: 900px;
 }
+
 #userContainer1, #userContainer2, #userContainer3{
   width:100%;
   height:300px;
-  background: black;
+  // background: black;
 }
-@media only screen and (device-width : 375px) and (device-height : 812px) {
 
+#project1, #project2, #project3, #project4, #project5, #project6, #project7,
+#project8, #project9{
+  width: 100%;
+  height:300px;
+  float: left;
+  padding: 2px;
+  color: teal;
+}
+
+
+
+@media only screen and (device-width : 375px) and (device-height : 812px) {
+  #project1, #project2, #project3, #project4, #project5, #project6, #project7,
+  #project8, #project9{
+    width: 100%;
+    height:300px;
+    float:none;
+    padding: 2px;
+    color: teal;
+  }
 }
