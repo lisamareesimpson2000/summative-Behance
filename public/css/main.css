@@ -19,7 +19,7 @@ img {
 .resize {
   width: 250px;
   height: 600px;
-  padding-left: 50px;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -117,17 +117,15 @@ img {
     height: 300px;
     float: left;
     padding-right: 50px;
-    background: pink;
   }
 
   #barchart {
     width: 50%;
     height: 300px;
     float: left;
-    background: yellow;
   }
 
-  #dashboard_div::after {
+  #barchart::after {
     clear: both;
     display: table;
     content: "";

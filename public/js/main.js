@@ -28,7 +28,7 @@ var stats = [
 
 var j = 0;
 for ( var i = 0 ; i < Desname.length; i++) {
-    
+    console.log(Desname[i]);
 
 
 $.ajax({
@@ -43,20 +43,16 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-            // stats[j].first_name = apiData.user.first_name;
-            // stats[j].followers = apiData.user.stats.followers;
-            // stats[j].following = apiData.user.stats.following;
-            // stats[j].appreciations = apiData.user.stats.appreciations;
-            // stats[j].views = apiData.user.stats.views;
-            // stats[j].comments = apiData.user.stats.comments;
-            // return(apiData.user.stats.followers);
-            //console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
-            //console.log(j);
-    j += 1;
-            
-
-
-        
+            stats[j].first_name = apiData.user.first_name;
+            stats[j].followers = apiData.user.stats.followers;
+            stats[j].following = apiData.user.stats.following;
+            stats[j].appreciations = apiData.user.stats.appreciations;
+            stats[j].views = apiData.user.stats.views;
+            stats[j].comments = apiData.user.stats.comments;
+            //return(apiData.user.stats.followers);
+            console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
+            console.log(j);
+    j += 1;        
             
 
 
@@ -147,161 +143,19 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
-document.getElementById("myModal").style.display="none";
-document.getElementById("infobtn").addEventListener('click',function(){
-  document.getElementById("myModal").style.display="block";
+// document.getElementById("dashboard_div").style.display="none";
+// document.getElementById("infobtn").addEventListener('click',function(){
+//   document.getElementById("dashboard_div").style.display="block";
+// });
+// $("#dashboard_div").hide();
+$('#infobtn').click(function(){
+  $("#dashboard_div").toggle();
 });
-
 // $(document).ready(function(){
 //   $('#infobtn').click(function(){
-//     $('#myModal').show();
 //     $('#dashboard_div').show();
 //   });
 //   $('.close').click(function(){
-//     $('#myModal').hide();
 //     $('#dashboard_div').hide();
 //   });
 // });
-// console.log("working");
-var desName = ['matiascorea', 'lucaviola', 'raewynbrandon'];
-var j = desName[0];
-console.log(j);
-var len = desName.length;
-var firstDes = ['matiascorea'];
-
-for (var i = 0; i < desName.length; i++){
-console.log(desName);
-
-
-$.ajax({
-    dataType: 'jsonp',
-    url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
-    // url: 'http://behance.net/v2/users?api_key=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
-    type: 'GET',
-    async: false,
-    success: function (behance_data) {
-        console.log(behance_data);
-        // console.log(behance_data.users.length);
-        console.log(behance_data.user.first_name);
-        console.log(behance_data.user.last_name);
-        console.log(behance_data.user.occupation);
-        console.log(behance_data.user.fields);
-        console.log(behance_data.user.images[138]);
-
-        // if (behance_data.user.first_name < 10) {
-        //     des1 = "Matias Corea";
-        //   } else if (behance_data.user.first_name < 8) {
-        //     des2 = "Luka Viola";
-        //   }
-        //   else {
-        //     des3 = "Raewyn Brandon";
-        //   }
-        // console.log(des1)
-        // console.log(des2)
-        // console.log(des3)
-
-        //TRYING TO GET FIRST NAME INDIVIDUALLY FOR STYLING - COLUMNS to sit right
-
-        // var desObj, x;
-        // desObj = {"name":"John", "age":30, "car":null};
-        // x = desObj.name;
-        // document.getElementById("demo").innerHTML = x;
-
-
-        document.getElementById("des__details").innerHTML+= '<div class="user-row"><div class="text-row"><p class="designer__h2--f">' + behance_data.user.first_name + ' ' + behance_data.user.last_name +'</p>' + 
-        '<br>'+'<p class="designer__h2--f">' + behance_data.user.occupation + '</p></div>'
-        +
-        '<div class="img-row"><img class="img-thumbnail img__shadow" src = "' + behance_data.user.images[138] + '" alt="profile photo"></div></div>';
-       
-    //    document.getElementById("des__details--img").innerHTML += '<div class="cont__des--image"><img class="img-thumbnail img__shadow col" src = "' + behance_data.user.images[138] + '" alt="profile photo"</div>';
-       //document.getElementById("des__details--img").innerHTML += '<img class="img-thumbnail img__shadow" src = "' + behance_data.user.images[138] + '" alt="profile photo" style="width:200px; height:200px;">';
-    
-    
-    
-    
-    },
-    error: function (error) {
-
-        console.log(error);
-    }
-});
-
-}
-//loop is closed
-
-
-
-var container = $("#BehanceProject");//pink
-
-
-
-var user= ["matiascorea","lucaviola","raewynbrandon"];
-console.log(user[0],user[1],user[2])
-var i;
-for (i=0; i<3; i++){
-  console.log(i);
-
-  var url='https://api.behance.net/v2/users/'+user[i]+'/projects?client_id=dSoSYYcQQTsMHJ9O5hWkN6gns4aV5gOM';
-  console.log(url);
-  $.ajax({
-    url: url,
-    dataType: "jsonp",
-    type: "GET",
-    success: function(data){
-
-      console.log(data);
-       for (var j= 0; j < 3; j++) {
-         console.log(j);
-         console.log(data.projects[j]);
-
-            var project = data.projects[j];
-             console.log(project);
-             if (j>0){
-               $('#project2, #project3').hide();
-              $('#more').click(function(){
-                $('#project2, #project3').show();
-              })
-                  }
-
-
-             if (j==0) {
-              container.append('<div align="center" id="project1" style="height: 75em; width: 100%; border: blue 1px solid;"></div>')
-
-
-            var   projContainer1 = document.getElementById('project1')
-                 projContainer1.innerHTML +=('<div style="height: 1.825em; width: 300px;" class="project__item">'+project.owners[0].display_name+'</div>')
-                 projContainer1.innerHTML +=('<div style="height: 1.825em; width: 400px;" class="project__item">'+project.name+'</div>')
-                  projContainer1.innerHTML +=('<div style="height: 21.5em; width: 250px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-
-              console.log(projContainer1);
-
-
-             } else if (j==1){
-
-              container.append('<div align="center" id="project2" style="height: 75em; width: 100%; border: red 1px solid;"></div>')
-              var projContainer2 = document.getElementById('project2')
-              projContainer2.innerHTML +=('<div style="height: 1.825em; width: 300px;" class="project__item">'+project.owners[0].display_name+'</div>')
-                projContainer2.innerHTML +=('<div style="height: 1.825em; width: 300px;" class="project__item">'+project.name+'</div>')
-                 projContainer2.innerHTML +=('<div style="height: 21.5em; width: 250px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-                  console.log(projContainer2);
-
-            } else if (j==2){
-              container.append('<div align="center" id="project3" style="height: 75em; width: 100%; border: green 1px solid; "></div>')
-              var projContainer3 = document.getElementById('project3')
-
-              projContainer3.innerHTML +=('<div style="height: 1.825em; width: 300px;" class="project__item">'+project.owners[0].display_name+'</div>')
-                projContainer3.innerHTML +=('<div style="height: 1.825em; width: 300px;" class="project__item">'+project.name+'</div>')
-                 projContainer3.innerHTML +=('<div style="height: 21.5em; width: 250px;" class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-
-            console.log(projContainer3);
-            }
-
-
-}//for
-
-}, //success
-    error:function(error){
-      console.log('error');
-    }
-  });
-}

@@ -38,7 +38,8 @@ module.exports = function(grunt) {
     //   separator: ';',
     // },
     dist: {
-      src: [ 'public/js/lexi.js','public/js/lisa.js','public/js/joon.js'],
+      //src: [ 'public/js/lexi.js','public/js/lisa.js','public/js/joon.js'],
+      src: [ 'public/js/lexi.js'],
       dest: 'public/js/main.js',
     },
   },

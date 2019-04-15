@@ -28,7 +28,7 @@ var stats = [
 
 var j = 0;
 for ( var i = 0 ; i < Desname.length; i++) {
-    
+    console.log(Desname[i]);
 
 
 $.ajax({
@@ -43,20 +43,16 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-            // stats[j].first_name = apiData.user.first_name;
-            // stats[j].followers = apiData.user.stats.followers;
-            // stats[j].following = apiData.user.stats.following;
-            // stats[j].appreciations = apiData.user.stats.appreciations;
-            // stats[j].views = apiData.user.stats.views;
-            // stats[j].comments = apiData.user.stats.comments;
-            // return(apiData.user.stats.followers);
-            //console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
-            //console.log(j);
-    j += 1;
-            
-
-
-        
+            stats[j].first_name = apiData.user.first_name;
+            stats[j].followers = apiData.user.stats.followers;
+            stats[j].following = apiData.user.stats.following;
+            stats[j].appreciations = apiData.user.stats.appreciations;
+            stats[j].views = apiData.user.stats.views;
+            stats[j].comments = apiData.user.stats.comments;
+            //return(apiData.user.stats.followers);
+            console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
+            console.log(j);
+    j += 1;        
             
 
 
@@ -147,18 +143,19 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
-document.getElementById("myModal").style.display="none";
-document.getElementById("infobtn").addEventListener('click',function(){
-  document.getElementById("myModal").style.display="block";
+// document.getElementById("dashboard_div").style.display="none";
+// document.getElementById("infobtn").addEventListener('click',function(){
+//   document.getElementById("dashboard_div").style.display="block";
+// });
+// $("#dashboard_div").hide();
+$('#infobtn').click(function(){
+  $("#dashboard_div").toggle();
 });
-
 // $(document).ready(function(){
 //   $('#infobtn').click(function(){
-//     $('#myModal').show();
 //     $('#dashboard_div').show();
 //   });
 //   $('.close').click(function(){
-//     $('#myModal').hide();
 //     $('#dashboard_div').hide();
 //   });
 // });
