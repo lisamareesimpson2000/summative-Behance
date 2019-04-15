@@ -1,6 +1,6 @@
-var userContainer1 = $("#userContainer1")
-var userContainer2 = $("#userContainer2")
-var userContainer3 = $("#userContainer3")
+var userContainer1 = $("#userContainer1");
+var userContainer2 = $("#userContainer2");
+var userContainer3 = $("#userContainer3");
 
 //user 1 matiascorea
   $.ajax({
@@ -24,8 +24,8 @@ var userContainer3 = $("#userContainer3")
               var  projContainer1 = document.getElementById('project1')
                    projContainer1.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                    projContainer1.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                   projContainer1.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-                   projContainer1.innerHTML +=('<button type="button" id="more"> Load More </button>');
+                   projContainer1.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                   projContainer1.innerHTML +=('<button type="button" id="more1"> Load More </button>');
 
               console.log(projContainer1);
 
@@ -36,7 +36,7 @@ var userContainer3 = $("#userContainer3")
               var projContainer2 = document.getElementById('project2')
                   projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                   projContainer2.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                  projContainer2.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                  projContainer2.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
               console.log(projContainer2);
 
@@ -45,7 +45,7 @@ var userContainer3 = $("#userContainer3")
               var projContainer3 = document.getElementById('project3')
                   projContainer3.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                   projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                  projContainer3.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                  projContainer3.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
               console.log(projContainer3);
             }
@@ -55,7 +55,7 @@ var userContainer3 = $("#userContainer3")
 
 if (j>0){
     $('#project2, #project3').hide();
-    $('#more').click(function(){
+    $('#more1').click(function(){
     $('#project2, #project3').toggle();
   });
       }
@@ -88,8 +88,8 @@ if (j>0){
                 var  projContainer4 = document.getElementById('project4')
                      projContainer4.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                      projContainer4.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                     projContainer4.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-                     projContainer4.innerHTML +=('<button type="button" id="more"> Load More </button>');
+                     projContainer4.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                     projContainer4.innerHTML +=('<button type="button" id="more2"> Load More </button>');
 
                 console.log(projContainer4);
 
@@ -100,7 +100,7 @@ if (j>0){
                 var projContainer5 = document.getElementById('project5')
                     projContainer5.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                     projContainer5.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                    projContainer5.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                    projContainer5.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
                 console.log(projContainer5);
 
@@ -109,7 +109,7 @@ if (j>0){
                 var projContainer6 = document.getElementById('project6')
                     projContainer6.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                     projContainer6.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                    projContainer6.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                    projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
                 console.log(projContainer6);
               }
@@ -119,7 +119,7 @@ if (j>0){
 
   if (k>0){
       $('#project5, #project6').hide();
-      $('#more').click(function(){
+      $('#more2').click(function(){
       $('#project5, #project6').toggle();
     });
         }
@@ -152,8 +152,9 @@ if (j>0){
                   var  projContainer7 = document.getElementById('project7')
                        projContainer7.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                        projContainer7.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                       projContainer7.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
-                       projContainer7.innerHTML +=('<button type="button" id="more"> Load More </button>');
+                       projContainer7.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                       projContainer7.innerHTML +=('<button type="button" id="more3"> Load More </button>');
+
 
                   console.log(projContainer7);
 
@@ -164,7 +165,7 @@ if (j>0){
                   var projContainer8 = document.getElementById('project8')
                       projContainer8.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                       projContainer8.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                      projContainer8.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                      projContainer8.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
                   console.log(projContainer8);
 
@@ -173,7 +174,7 @@ if (j>0){
                   var projContainer9 = document.getElementById('project9')
                       projContainer9.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                       projContainer9.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                      projContainer9.innerHTML +=('<div class="project__item">' + '<img src= '+ project.covers[404] +' >'+'</div>')
+                      projContainer9.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
                   console.log(projContainer9);
                 }
@@ -183,7 +184,7 @@ if (j>0){
 
     if (l>0){
         $('#project8, #project9').hide();
-        $('#more').click(function(){
+        $('#more3').click(function(){
         $('#project8, #project9').toggle();
       });
           }

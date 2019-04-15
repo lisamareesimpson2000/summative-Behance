@@ -7,7 +7,7 @@
   width:100%;
   // height:300px;
   height:300px;
-  background:black;
+  background:linear-gradient($turq-l, $dark);
 }
 
 
@@ -17,23 +17,31 @@
   height:300px;
   float:left;
   padding:2px;
-  color:teal;
 }
-
 
 
 @media only screen and (max-width:800px) {
   #project1, #project2, #project3, #project4, #project5, #project6, #project7,
   #project8, #project9{
     width:100%;
-    height:300px;
+
     padding:5px;
     margin:auto;
-    color:teal;
+    font-family: $main-font;
+    color: $dark;
+
+  }
+
+  #userContainer1, #userContainer2, #userContainer3{
+    background:linear-gradient($turq-l, $dark);
+  }
+
+  .shadow-float {
+    box-shadow: 5px 10px 8px $dark;
   }
 
   #project1, #project4, #project7 {
-    background:cyan;
+    background:linear-gradient($turq-l, $dark);
   }
 
   #project2, #project3, #project5, #project6,
