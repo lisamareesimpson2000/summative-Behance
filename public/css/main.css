@@ -61,12 +61,19 @@ img {
   background: linear-gradient(#04adbf, #1a283e);
 }
 
+.load__button {
+  height: 25px;
+  width: 80px;
+  font-family: arial;
+  color: #1a283e;
+}
+
 .shadow-float {
   box-shadow: 5px 10px 8px #1a283e;
 }
 
 .project__item {
-  font-family: "Amaranth", regular;
+  font-family: arial;
   color: #1a283e;
 }
 
@@ -91,7 +98,7 @@ img {
   }
 
   .load__button {
-    height: 30px;
+    height: 25px;
     width: 80px;
     font-family: "Amaranth", regular;
     color: #1a283e;
