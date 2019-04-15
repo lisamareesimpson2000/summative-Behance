@@ -11,6 +11,11 @@
   height: 500px;
 }
 
+img {
+  width: 200px;
+  height: 20% px;
+}
+
 .resize {
   width: 250px;
   height: 600px;
@@ -50,6 +55,12 @@
 
 /* FONTS */
 /*MAIN COLOURS */
+#lexi {
+  width: 100%;
+  height: 700px;
+  background: red;
+}
+
 .btn {
   text-align: center;
 }
@@ -59,7 +70,68 @@
   height: 100px;
 }
 
+.myModal {
+  width: 100%;
+  background: yellow;
+}
+
+.myModalContent {
+  width: 100%;
+  background: green;
+}
+
 #piechart {
+  width: 100%;
+  height: 300px;
+}
+
+#barchart {
+  width: 100%;
+  height: 300px;
+}
+
+#dashboard_div {
+  width: 100%;
+  height: 700px;
+  background-color: #b5d3dd;
+}
+
+.modal-header {
+  float: left;
+}
+
+#myModal {
+  height: 700px;
+  width: 100%;
+  background-color: #04adbf;
+}
+
+.close {
+  float: left;
+  color: #000000;
+}
+
+@media only screen and (min-width: 600px) {
+  #piechart {
+    width: 50%;
+    height: 300px;
+    float: left;
+    padding-right: 50px;
+    background: pink;
+  }
+
+  #barchart {
+    width: 50%;
+    height: 300px;
+    float: left;
+    background: yellow;
+  }
+
+  #dashboard_div::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
 }
 /* FONTS */
 /*MAIN COLOURS */
@@ -92,46 +164,6 @@
   height: 300px;
 }
 
-#barchart {
-  width: 100%;
-  height: 300px;
-}
-
-#dashboard_div {
-  width: 100%;
-  height: 700px;
-  background-color: #b5d3dd;
-}
-
-#myModal {
-  height: 700px;
-  width: 100%;
-  background-color: #04adbf;
-}
-
-.close {
-  color: #ffffff;
-}
-
-@media only screen and (min-width: 600px) {
-  #piechart {
-    width: 50%;
-    height: 300px;
-    float: left;
-    padding-right: 50px;
-  }
-
-  #barchart {
-    width: 50%;
-    height: 300px;
-    float: left;
-  }
-
-  #dashboard_div::after {
-    clear: both;
-    display: table;
-    content: "";
-  }
 .section--lisa {
   width: 100%;
   height: 900px;
@@ -219,4 +251,3 @@
 }
 
 /*# sourceMappingURL=main.css.map */
-}

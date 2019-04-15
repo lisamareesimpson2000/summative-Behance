@@ -1,7 +1,7 @@
 var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
 var stats = [
     {
-        "first_name": "" ,
+        "first_name": "bob" ,
         "followers": 653 ,
         "following": 7554,
         "appreciations": 13644,
@@ -9,16 +9,16 @@ var stats = [
         "comments": 100
     },
     {
-        "first_name": "" ,
-        "followers": 5755 ,
+        "first_name": "mia" ,
+        "followers": 555 ,
         "following": "",
         "appreciations": "",
         "views": "",
         "comments": ""
     },
     {
-        "first_name": "" ,
-        "followers": 4554 ,
+        "first_name": "lexi" ,
+        "followers":554 ,
         "following": "",
         "appreciations": "",
         "views": "",
@@ -43,15 +43,15 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-            stats[j].first_name = apiData.user.first_name;
-            stats[j].followers = apiData.user.stats.followers;
-            stats[j].following = apiData.user.stats.following;
-            stats[j].appreciations = apiData.user.stats.appreciations;
-            stats[j].views = apiData.user.stats.views;
-            stats[j].comments = apiData.user.stats.comments;
+            // stats[j].first_name = apiData.user.first_name;
+            // stats[j].followers = apiData.user.stats.followers;
+            // stats[j].following = apiData.user.stats.following;
+            // stats[j].appreciations = apiData.user.stats.appreciations;
+            // stats[j].views = apiData.user.stats.views;
+            // stats[j].comments = apiData.user.stats.comments;
             // return(apiData.user.stats.followers);
-            console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
-            console.log(j);
+            //console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
+            //console.log(j);
     j += 1;
             
 
@@ -76,6 +76,7 @@ var data = new google.visualization.DataTable();
 data.addColumn('string','Name');
        data.addColumn('number','Followers');
        for (var i = 0; i < stats.length; i++) {
+         console.log(stats[i].first_name, stats[i].followers)
           data.addRow([
                     stats[i].first_name,
                     stats[i].followers
@@ -146,16 +147,18 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
-
-
-$(document).ready(function(){
-  $('#infobtn').click(function(){
-    $('#myModal').show();
-    $('#dashboard_div').show();
-  });
-  $('.close').click(function(){
-    $('#myModal').hide();
-    $('#dashboard_div').hide();
-  });
+document.getElementById("myModal").style.display="none";
+document.getElementById("infobtn").addEventListener('click',function(){
+  document.getElementById("myModal").style.display="block";
 });
 
+// $(document).ready(function(){
+//   $('#infobtn').click(function(){
+//     $('#myModal').show();
+//     $('#dashboard_div').show();
+//   });
+//   $('.close').click(function(){
+//     $('#myModal').hide();
+//     $('#dashboard_div').hide();
+//   });
+// });
