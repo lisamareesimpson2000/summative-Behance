@@ -61,6 +61,15 @@ img {
   background: linear-gradient(#04adbf, #1a283e);
 }
 
+.shadow-float {
+  box-shadow: 5px 10px 8px #1a283e;
+}
+
+.project__item {
+  font-family: "Amaranth", regular;
+  color: #1a283e;
+}
+
 #project1, #project2, #project3, #project4, #project5, #project6, #project7,
 #project8, #project9 {
   width: 30%;
@@ -69,31 +78,32 @@ img {
   padding: 2px;
 }
 
-.project__item {
-  font-family: "Amaranth", regular;
-  color: #1a283e;
-}
-
 @media only screen and (max-width: 800px) {
   #project1, #project2, #project3, #project4, #project5, #project6, #project7,
 #project8, #project9 {
     width: 100%;
     padding: 5px;
     margin: auto;
-    font-family: "Amaranth", regular;
-    color: #1a283e;
   }
 
   #userContainer1, #userContainer2, #userContainer3 {
     background: linear-gradient(#04adbf, #1a283e);
   }
 
+  .load__button {
+    height: 30px;
+    width: 80px;
+    font-family: "Amaranth", regular;
+    color: #1a283e;
+  }
+
   .shadow-float {
     box-shadow: 5px 10px 8px #1a283e;
   }
 
-  #project1, #project4, #project7 {
-    background: linear-gradient(#04adbf, #1a283e);
+  .project__item {
+    font-family: "Amaranth", regular;
+    color: #1a283e;
   }
 
   #project2, #project3, #project5, #project6,

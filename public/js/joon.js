@@ -25,7 +25,7 @@ var userContainer3 = $("#userContainer3");
                    projContainer1.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                    projContainer1.innerHTML +=('<div class="project__item">'+project.name+'</div>')
                    projContainer1.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
-                   projContainer1.innerHTML +=('<button type="button" id="more1"> Load More </button>');
+                   projContainer1.innerHTML +=('<button type="button" id="more1" class="load__button"> Load More </button>');
 
               console.log(projContainer1);
 
