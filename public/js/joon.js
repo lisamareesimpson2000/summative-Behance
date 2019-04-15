@@ -89,7 +89,7 @@ if (j>0){
                      projContainer4.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                      projContainer4.innerHTML +=('<div class="project__item">'+project.name+'</div>')
                      projContainer4.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
-                     projContainer4.innerHTML +=('<button type="button" id="more2"> Load More </button>');
+                     projContainer4.innerHTML +=('<button type="button" id="more2" class="load__button"> Load More </button>');
 
                 console.log(projContainer4);
 
@@ -153,7 +153,7 @@ if (j>0){
                        projContainer7.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
                        projContainer7.innerHTML +=('<div class="project__item">'+project.name+'</div>')
                        projContainer7.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
-                       projContainer7.innerHTML +=('<button type="button" id="more3"> Load More </button>');
+                       projContainer7.innerHTML +=('<button type="button" id="more3" class="load__button"> Load More </button>');
 
 
                   console.log(projContainer7);
