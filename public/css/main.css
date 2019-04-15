@@ -100,7 +100,7 @@ img {
   .load__button {
     height: 25px;
     width: 80px;
-    font-family: "Amaranth", regular;
+    font-family: arial;
     color: #1a283e;
   }
 
@@ -109,7 +109,7 @@ img {
   }
 
   .project__item {
-    font-family: "Amaranth", regular;
+    font-family: arial;
     color: #1a283e;
   }
 
