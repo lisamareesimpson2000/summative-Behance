@@ -227,30 +227,24 @@ $(document).ready(function(){
 });
 //Modal - INFO
 
-// Get the button that opens the modal
 var iconInfo = document.getElementById("i__info");
 var i_modal;
-// When the user clicks the button, open the modal 
 function modal_info() {
     i_modal = document.getElementById('modal_info');
   console.log(i_modal);
   i_modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 function info_close() {
-  //var span = document.getElementsByClassName("close")[0];
-  //var  i_modal = document.getElementById('modal_info');
   i_modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 //window.onclick = function infoClose_outSide(event) {
-    window.onclick = function (event) {
-    if (event.target == i_modal) {
-        i_modal.style.display = "none";
-    }
-};
+//     window.onclick = function (event) {
+//     if (event.target == i_modal) {
+//         i_modal.style.display = "none";
+//     }
+// };
 
 var desName = ['matiascorea', 'lucaviola', 'raewynbrandon'];
 var j = desName[0];
