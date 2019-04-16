@@ -1,19 +1,72 @@
 
 //LISA JS
-$("#show__section--lisa").click(function(){
+
+//show__modal--info()
+$(document).ready(function(){
+    $("#homepage").show();
     $("#joon").hide();
-    $("#lisa").show();
-    $('html, body').animate({
-        scrollTop: $("#lisa").offset().top
-     }, 1000);
-});
-$("#show__section--joon").click(function(){
     $("#lisa").hide();
-    $("#joon").show();
-    $('html, body').animate({
-        scrollTop: $("#joon").offset().top
-     }, 1000);
+    $("#lexi").hide();
+    $("#footer--lisa").hide();
+    $("#modal_info").hide();
+
+    $("#show__section--lisa").click(function(){
+        $("#lisa").show();
+        $("#joon").hide();
+        $("#lexi").hide();
+        $("#footer--lisa").show();
+        $('html, body').animate({
+            scrollTop: $("#lisa").offset().top
+        }, 1000);
+    });
+
+    $("#show__section--joon").click(function(){
+        $("#joon").show();
+        $("#lisa").hide();
+        $("#lexi").hide();
+        $("#footer--lisa").show();
+        $('html, body').animate({
+            scrollTop: $("#joon").offset().top
+        }, 1000);
+    });
+//shows lexi stats once id is given eslint
+    // $("#").click(function(){
+    //     $("#lexi").show();
+    //     $("#joon").hide();
+    //     $("#lisa").hide();
+    //     $("#footer--lisa").show();
+    //     $('html, body').animate({
+    //         scrollTop: $("#lexi").offset().top
+    //     }, 1000);
+    // });
+
 });
+//Modal - INFO
+
+// Get the button that opens the modal
+var iconInfo = document.getElementById("i__info");
+var i_modal;
+// When the user clicks the button, open the modal 
+function modal_info() {
+    i_modal = document.getElementById('modal_info');
+  console.log(i_modal);
+  i_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function info_close() {
+  //var span = document.getElementsByClassName("close")[0];
+  //var  i_modal = document.getElementById('modal_info');
+  i_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function infoClose_outSide(event) {
+    window.onclick = function (event) {
+    if (event.target == i_modal) {
+        i_modal.style.display = "none";
+    }
+};
 
 var desName = ['matiascorea', 'lucaviola', 'raewynbrandon'];
 var j = desName[0];
@@ -23,7 +76,7 @@ var firstDes = ['matiascorea'];
 
 for (var i = 0; i < desName.length; i++){
 console.log(desName);
-
+//const j=i;
 $.ajax({
     dataType: 'jsonp',
     url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',

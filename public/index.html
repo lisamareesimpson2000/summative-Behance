@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>360 Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
@@ -19,7 +22,21 @@
 	<div class="container-fluid">
 
             <!--SECTION 1 - HOMEPAGE-->
-            <div id="" class="section section--homepage">
+            <div id="homepage" class="section section--homepage">
+                <div class="icon--info">
+                    <button id="i__info" onclick="modal_info()"><i class="fas fa-info-circle iconInfo"></i></button>
+                </div>
+                    <!-- Info Modal -->
+                    <div id="modal_info" class="modal__info--text i__modal">
+                            <!-- Info Modal content -->
+                            <div class="modal__info--content">
+                              <span onclick="info_close()" class="close__i">&times;</span>
+                              <p>At 360 Design studio we 
+                                    believe in the power of ideas. <br><br>Discover our team porfolios, we hope to spark some inspiration. Located in Wellington, NZ.</p>
+                            </div>
+                    </div>
+
+
                     <div class="resize">
                         <img id="logo" src="images/360-log.svg">
                     </div>
