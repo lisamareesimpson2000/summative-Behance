@@ -14,8 +14,8 @@ app.use(function(req, res, next){
 });
 
 app.use(express.static('./public'));
-// app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/jquery.min.js')));
-// app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/jquery.min.js')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
 // app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/', function(req,res){
