@@ -67,17 +67,16 @@ google.charts.load('current', {'packages':['corechart', 'controls']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-
-var data = new google.visualization.DataTable();
-data.addColumn('string','Name');
-       data.addColumn('number','Followers');
-       for (var i = 0; i < stats.length; i++) {
-         console.log(stats[i].first_name, stats[i].followers)
-          data.addRow([
-                    stats[i].first_name,
-                    stats[i].followers
-                    ]);
-          } //arraytodatatable
+  var data = new google.visualization.DataTable();
+    data.addColumn('string','Name');
+    data.addColumn('number','Followers');
+      for (var i = 0; i < stats.length; i++) {
+        console.log(stats[i].first_name, stats[i].followers)
+        data.addRow([
+          stats[i].first_name,
+          stats[i].followers
+        ]);
+      } //arraytodatatable
 
 var options = {
 title: 'behance followers',
