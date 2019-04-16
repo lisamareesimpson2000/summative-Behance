@@ -184,20 +184,67 @@ $(document).ready(function(){
 */
 
 //LISA JS
-$("#show__section--lisa").click(function(){
+
+//show__modal--info()
+$(document).ready(function(){
+    $("#homepage").show();
     $("#joon").hide();
-    $("#lisa").show();
-    $('html, body').animate({
-        scrollTop: $("#lisa").offset().top
-     }, 1000);
-});
-$("#show__section--joon").click(function(){
     $("#lisa").hide();
-    $("#joon").show();
-    $('html, body').animate({
-        scrollTop: $("#joon").offset().top
-     }, 1000);
+    $("#lexi").hide();
+    $("#footer--lisa").hide();
+    $("#modal_info").hide();
+
+    $("#show__section--lisa").click(function(){
+        $("#lisa").show();
+        $("#joon").hide();
+        $("#lexi").hide();
+        $("#footer--lisa").show();
+        $('html, body').animate({
+            scrollTop: $("#lisa").offset().top
+        }, 1000);
+    });
+
+    $("#show__section--joon").click(function(){
+        $("#joon").show();
+        $("#lisa").hide();
+        $("#lexi").hide();
+        $("#footer--lisa").show();
+        $('html, body').animate({
+            scrollTop: $("#joon").offset().top
+        }, 1000);
+    });
+//shows lexi stats once id is given eslint
+    // $("#").click(function(){
+    //     $("#lexi").show();
+    //     $("#joon").hide();
+    //     $("#lisa").hide();
+    //     $("#footer--lisa").show();
+    //     $('html, body').animate({
+    //         scrollTop: $("#lexi").offset().top
+    //     }, 1000);
+    // });
+
 });
+//Modal - INFO
+
+var iconInfo = document.getElementById("i__info");
+var i_modal;
+function modal_info() {
+    i_modal = document.getElementById('modal_info');
+  console.log(i_modal);
+  i_modal.style.display = "block";
+}
+function info_close() {
+  i_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function infoClose_outSide(event) {
+//     window.onclick = function (event) {
+//     if (event.target == i_modal) {
+//         i_modal.style.display = "none";
+//     }
+// };
 
 var desName = ['matiascorea', 'lucaviola', 'raewynbrandon'];
 var j = desName[0];
@@ -207,7 +254,7 @@ var firstDes = ['matiascorea'];
 
 for (var i = 0; i < desName.length; i++){
 console.log(desName);
-
+//const j=i;
 $.ajax({
     dataType: 'jsonp',
     url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
@@ -257,10 +304,10 @@ var userContainer3 = $("#userContainer3");
              if (j==0) {
               userContainer1.append('<div id="project1"></div>');
 
-              var  projContainer1 = document.getElementById('project1')
-                   projContainer1.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                   projContainer1.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                   projContainer1.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+              var  projContainer1 = document.getElementById('project1');
+                   projContainer1.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                   projContainer1.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                   projContainer1.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
                    projContainer1.innerHTML +=('<button type="button" id="more1" class="load__button"> Load More </button>');
 
               console.log(projContainer1);
@@ -268,20 +315,20 @@ var userContainer3 = $("#userContainer3");
 
              } else if (j==1){
 
-            userContainer1.append('<div id="project2"></div>')
-              var projContainer2 = document.getElementById('project2')
+            userContainer1.append('<div id="project2"></div>');
+              var projContainer2 = document.getElementById('project2');
                   projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                  projContainer2.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                  projContainer2.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                  projContainer2.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                  projContainer2.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
               console.log(projContainer2);
 
             } else if (j==2){
-              userContainer1.append('<div id="project3"></div>')
-              var projContainer3 = document.getElementById('project3')
-                  projContainer3.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
+              userContainer1.append('<div id="project3"></div>');
+              var projContainer3 = document.getElementById('project3');
+                  projContainer3.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
                   projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                  projContainer3.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                  projContainer3.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
               console.log(projContainer3);
             }
@@ -321,10 +368,10 @@ if (j>0){
                if (k==0) {
                 userContainer2.append('<div id="project4"></div>');
 
-                var  projContainer4 = document.getElementById('project4')
-                     projContainer4.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                     projContainer4.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                     projContainer4.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                var  projContainer4 = document.getElementById('project4');
+                     projContainer4.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                     projContainer4.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                     projContainer4.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
                      projContainer4.innerHTML +=('<button type="button" id="more2" class="load__button"> Load More </button>');
 
                 console.log(projContainer4);
@@ -332,19 +379,19 @@ if (j>0){
 
               } else if (k==1){
 
-              userContainer2.append('<div id="project5"></div>')
-                var projContainer5 = document.getElementById('project5')
-                    projContainer5.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                    projContainer5.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                    projContainer5.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+              userContainer2.append('<div id="project5"></div>');
+                var projContainer5 = document.getElementById('project5');
+                    projContainer5.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                    projContainer5.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                    projContainer5.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
                 console.log(projContainer5);
 
               } else if (k==2){
-                userContainer2.append('<div id="project6"></div>')
-                var projContainer6 = document.getElementById('project6')
-                    projContainer6.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                    projContainer6.innerHTML +=('<div class="project__item">'+project.name+'</div>')
+                userContainer2.append('<div id="project6"></div>');
+                var projContainer6 = document.getElementById('project6');
+                    projContainer6.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                    projContainer6.innerHTML +=('<div class="project__item">'+project.name+'</div>');
                     projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
 
                 console.log(projContainer6);
@@ -385,10 +432,10 @@ if (j>0){
                  if (l==0) {
                   userContainer3.append('<div id="project7"></div>');
 
-                  var  projContainer7 = document.getElementById('project7')
-                       projContainer7.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                       projContainer7.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                       projContainer7.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                  var  projContainer7 = document.getElementById('project7');
+                       projContainer7.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                       projContainer7.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                       projContainer7.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
                        projContainer7.innerHTML +=('<button type="button" id="more3" class="load__button"> Load More </button>');
 
 
@@ -406,11 +453,11 @@ if (j>0){
                   console.log(projContainer8);
 
                 } else if (l==2){
-                  userContainer3.append('<div id="project9"></div>')
-                  var projContainer9 = document.getElementById('project9')
-                      projContainer9.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                      projContainer9.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                      projContainer9.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                  userContainer3.append('<div id="project9"></div>');
+                  var projContainer9 = document.getElementById('project9');
+                      projContainer9.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                      projContainer9.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                      projContainer9.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
                   console.log(projContainer9);
                 }
@@ -430,4 +477,3 @@ if (j>0){
           console.log('error');
         }
       });
-  

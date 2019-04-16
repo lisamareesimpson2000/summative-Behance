@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>360 Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.min.css" />
@@ -15,10 +18,24 @@
 <body>
 
 	<!-- MASTER CONTAINER -->
-	<div class="container-fluid">
+	<!-- <div class="container-fluid"> -->
 
             <!--SECTION 1 - HOMEPAGE-->
-            <div id="" class="section section--homepage">
+            <div id="homepage" class="section section--homepage">
+                <div class="icon--info">
+                    <button id="i__info" onclick="modal_info()"><i class="fas fa-info-circle iconInfo"></i></button>
+                </div>
+                    <!-- Info Modal -->
+                    <div id="modal_info" class="modal__info--text i__modal">
+                            <!-- Info Modal content -->
+                            <div class="modal__info--content">
+                              <span onclick="info_close()" class="close__i">&times;</span>
+                              <p>At 360 Design studio we 
+                                    believe in the power of ideas. <br><br>Discover our team porfolios, we hope to spark some inspiration. Located in Wellington, NZ.</p>
+                            </div>
+                    </div>
+
+
                     <div class="resize">
                         <img id="logo" src="images/360-log.svg">
                     </div>
@@ -53,10 +70,10 @@
                     </div>
                 </div>
                     <!-- Modal 2-->
-                        <div id="myModal" class="modal fade" role="dialog" >
-                            <div class="modal-dialog modal-lg">
+                        <!-- <div id="myModal" class="modal fade" role="dialog" >
+                            <div class="modal-dialog modal-lg"> -->
                                 <!-- Modal content-->
-                               <div class="modal-content">
+                               <!-- <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">User Statistics</h4>
@@ -69,12 +86,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- Modal 3-->
-                            <div id="myModal" class="modal fade" role="dialog" >
-                                <div class="modal-dialog modal-lg">
+                            <!-- <div id="myModal" class="modal fade" role="dialog" >
+                                <div class="modal-dialog modal-lg"> -->
                                     <!-- Modal content-->
-                                    <div class="modal-content">
+                                    <!-- <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">User Statistics</h4>
@@ -88,7 +105,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--LEXI-->
 
             <!--SECTION 3 - LISA-->
@@ -113,16 +130,16 @@
 
                   <div class="" style="background: 04adbf;" id="behance-project">
                     <!-- <img class="img-responsive" id="ProjectCovers"> -->
-                    <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 1 stats</button>
+                    <button class="blue" id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 1 stats</button>
                   
                     <div id="userContainer1">
                       
                     </div>
-                    <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 2 stats</button>
+                    <!-- <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 2 stats</button> -->
                     <div id="userContainer2">
 
                     </div>
-                    <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 3 stats</button>
+                    <!-- <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 3 stats</button> -->
                     <div id="userContainer3">
 
 
@@ -150,7 +167,7 @@
             </div>
             <!--FOOTER-->
             
-   </div>
+   <!-- </div> -->
    <!-- MASTER CONTAINER -->
 
    <!-- SCRIPT -->
@@ -159,7 +176,7 @@
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
   crossorigin="anonymous"></script>  -->
   <script src="/jquery" ></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/main.min.js"></script>
   </body>
