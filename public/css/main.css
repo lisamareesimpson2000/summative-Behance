@@ -11,10 +11,15 @@
   height: 500px;
 }
 
+img {
+  width: 200px;
+  height: 20% px;
+}
+
 .resize {
   width: 250px;
   height: 600px;
-  padding-left: 50px;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -30,26 +35,41 @@
 
 #holder {
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: #0396a6;
+  display: flex;
 }
 
-.buttons {
+.cont__buttons {
   width: 100%;
-  font-family: "Amaranth", regular;
-  padding-left: 95px;
-  padding-top: 25px;
-  font-size: 24px;
-  margin-left: 40%;
+  position: relative;
+  display: inline-block;
+  display: flex;
 }
 
-.big-btn {
-  width: 90px;
-  height: 40px;
+.btn {
+  background-color: #04adbf !important;
+  border-color: #025e73 !important;
+  width: 100%;
+  height: 60px;
+  font-size: 1.4em;
+  font-family: "Amaranth", regular;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #1a283e !important;
+  border-color: #ffffff;
 }
 
 /* FONTS */
 /*MAIN COLOURS */
+#lexi {
+  width: 100%;
+  height: 700px;
+  background: red;
+}
+
 .btn {
   text-align: center;
 }
@@ -59,35 +79,17 @@
   height: 100px;
 }
 
+.myModal {
+  width: 100%;
+  background: yellow;
+}
+
+.myModalContent {
+  width: 100%;
+  background: green;
+}
+
 #piechart {
-}
-/* FONTS */
-/*MAIN COLOURS */
-#desCont__grad {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(#04adbf, #1a283e);
-}
-
-#logo__behance {
-  width: 50%;
-  padding-top: 20px;
-}
-
-#footer--lisa {
-  width: 100%;
-  height: 100px;
-  background-color: #b5d3dd;
-}
-
-#footer__copy {
-  font-family: "Amaranth", regular;
-  color: #ffffff;
-  font-size: 0.6em;
-  padding-top: 40px;
-}
-
-#des__details {
   width: 100%;
   height: 300px;
 }
@@ -103,6 +105,10 @@
   background-color: #b5d3dd;
 }
 
+.modal-header {
+  float: left;
+}
+
 #myModal {
   height: 700px;
   width: 100%;
@@ -110,7 +116,8 @@
 }
 
 .close {
-  color: #ffffff;
+  float: left;
+  color: #000000;
 }
 
 @media only screen and (min-width: 600px) {
@@ -127,15 +134,41 @@
     float: left;
   }
 
-  #dashboard_div::after {
+  #barchart::after {
     clear: both;
     display: table;
     content: "";
   }
-.section--lisa {
+}
+/* FONTS */
+/*MAIN COLOURS */
+#logo__behance {
   width: 100%;
-  height: 900px;
-  background-color: aqua;
+  padding-top: 20px;
+}
+
+#footer--lisa {
+  width: 100%;
+  height: 100px;
+  background-color: #b5d3dd;
+}
+
+#footer__copy {
+  font-family: "Amaranth", regular;
+  color: #ffffff;
+  font-size: 0.7em;
+  padding-top: 40px;
+}
+
+#section__list--designer {
+  width: 100%;
+  height: 300px;
+}
+
+.section__lisa {
+  width: 100%;
+  height: 1150px;
+  background-image: linear-gradient(#04adbf, #1a283e);
 }
 
 .designer__h2--f {
@@ -144,17 +177,23 @@
   font-size: 1em;
   display: block;
   width: 100%;
-  height: 30px;
   text-align: center;
 }
 
 .img__shadow {
-  border: 1px solid;
+  border: 18px solid;
+  border-color: #04adbf;
+  border-style: ridge;
   box-shadow: 5px 10px 8px #1a283e;
   width: 200px;
   height: 200px;
   display: block;
   margin: auto;
+}
+
+.section__footer {
+  width: 100%;
+  background-color: #b5d3dd;
 }
 
 .pbyB {
@@ -179,30 +218,50 @@
   opacity: 1;
 }
 
-.user-row {
-  height: 300px;
-  width: 100%;
-  background-color: brown;
+.row__user {
+  height: auto;
 }
 
-.text-row {
-  height: 100px;
+.row__text {
+  height: 150px;
   width: 100%;
-  background-color: red;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
-.img-row {
+.row__img {
   height: 200px;
   width: 100%;
-  background-color: yellow;
   display: block;
   margin: auto;
+  padding-top: 10px;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 600px) {
+  #logo__behance {
+    width: 50%;
+  }
+
+  #footer__copy {
+    font-size: 1em;
+  }
+
+  .row__text {
+    height: 150px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  .row__img {
+    height: 200px;
+    width: 100%;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1100px) {
   #logo__behance {
     width: 40%;
   }
@@ -216,7 +275,107 @@
   #footer__copy {
     padding-top: 60px;
   }
+
+  .section__lisa {
+    width: 100%;
+    height: 950px;
+  }
+
+  .row__user {
+    height: auto;
+    display: flex;
+  }
+
+  .row__img {
+    height: 300px;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 200px;
+  }
+
+  .row__text {
+    height: 300px;
+    width: 100%;
+    padding-left: 300px;
+  }
+
+  .designer__h2--f {
+    font-size: 1.6em;
+    width: 100%;
+    text-align: left;
+  }
+
+  .clearfix {
+    overflow: auto;
+  }
+}
+#behance-project {
+  width: 100%;
+  height: 900px;
+}
+
+#userContainer1, #userContainer2, #userContainer3 {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(#04adbf, #1a283e);
+}
+
+.load__button {
+  height: 25px;
+  width: 80px;
+  font-family: arial;
+  color: #1a283e;
+}
+
+.shadow-float {
+  box-shadow: 5px 10px 8px #1a283e;
+}
+
+.project__item {
+  font-family: arial;
+  color: #1a283e;
+}
+
+#project1, #project2, #project3, #project4, #project5, #project6, #project7,
+#project8, #project9 {
+  width: 30%;
+  height: 300px;
+  float: left;
+  padding: 2px;
+}
+
+@media only screen and (max-width: 800px) {
+  #project1, #project2, #project3, #project4, #project5, #project6, #project7,
+#project8, #project9 {
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+  }
+
+  #userContainer1, #userContainer2, #userContainer3 {
+    background: linear-gradient(#04adbf, #1a283e);
+  }
+
+  .load__button {
+    height: 25px;
+    width: 80px;
+    font-family: arial;
+    color: #1a283e;
+  }
+
+  .shadow-float {
+    box-shadow: 5px 10px 8px #1a283e;
+  }
+
+  .project__item {
+    font-family: arial;
+    color: #1a283e;
+  }
+
+  #project2, #project3, #project5, #project6,
+#project8, #project9 {
+    background: lightblue;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
-}
