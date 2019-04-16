@@ -46,6 +46,7 @@ $.ajax({
         console.log(error);
     }
 });
+} //loop is closed
 
 
 
@@ -214,32 +215,6 @@ $('#infobtn').click(function(){
 //   });
 // });
 
-
-$(document).ready(function(){
-  $('#infobtn').click(function(){
-    $('#myModal').show();
-    $('#dashboard_div').show();
-  });
-  $('.close').click(function(){
-    $('#myModal').hide();
-    $('#dashboard_div').hide();
-  });
-});
-
-
-console.log("hey Joon it's monday");
-}
-//loop is closed
-
-
-var options = {
-title: 'behance followers'
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-chart.draw(data, options);
-$(document).ready(function() {
 
 //user 1 matiascorea
   $.ajax({
