@@ -147,9 +147,9 @@ dashboard.draw(data);
 //   document.getElementById("dashboard_div").style.display="block";
 // });
 // $("#dashboard_div").hide();
-$('#infobtn').click(function(){
-  $("#dashboard_div").toggle();
-});
+// $('#infobtn').click(function(){
+//   $("#dashboard_div").toggle();
+// });
 // $(document).ready(function(){
 //   $('#infobtn').click(function(){
 //     $('#dashboard_div').show();

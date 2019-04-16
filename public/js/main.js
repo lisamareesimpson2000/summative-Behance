@@ -1,4 +1,5 @@
 
+
 //LISA JS
 $("#show__section--lisa").click(function(){
     $("#joon").hide();
@@ -50,6 +51,7 @@ $.ajax({
 
 
 
+
 var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
 var stats = [
     {
@@ -80,10 +82,11 @@ var stats = [
 
 var j = 0;
 for ( var i = 0 ; i < Desname.length; i++) {
+    console.log(Desname[i]);
 
 
 $.ajax({
-
+        
         dataType: 'jsonp',
         url: 'http://behance.net/v2/users/' + Desname[i] + '?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
         type: 'GET',
@@ -103,12 +106,8 @@ $.ajax({
             //return(apiData.user.stats.followers);
             console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
             console.log(j);
-    j += 1;
-
-
-
-
-
+    j += 1;        
+            
 
 
         },
@@ -122,17 +121,16 @@ google.charts.load('current', {'packages':['corechart', 'controls']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-
-var data = new google.visualization.DataTable();
-data.addColumn('string','Name');
-       data.addColumn('number','Followers');
-       for (var i = 0; i < stats.length; i++) {
-         console.log(stats[i].first_name, stats[i].followers)
-          data.addRow([
-                    stats[i].first_name,
-                    stats[i].followers
-                    ]);
-          } //arraytodatatable
+  var data = new google.visualization.DataTable();
+    data.addColumn('string','Name');
+    data.addColumn('number','Followers');
+      for (var i = 0; i < stats.length; i++) {
+        console.log(stats[i].first_name, stats[i].followers)
+        data.addRow([
+          stats[i].first_name,
+          stats[i].followers
+        ]);
+      } //arraytodatatable
 
 var options = {
 title: 'behance followers',
@@ -142,7 +140,7 @@ chartArea:{
   width:'70%',
   height:'90%'
 },
-is3D: true,
+is3D: true, 
 pieSliceBorderColor:  '#b5d3dd',
 backgroundColor: {
   fill: 'blue'
@@ -203,9 +201,9 @@ dashboard.draw(data);
 //   document.getElementById("dashboard_div").style.display="block";
 // });
 // $("#dashboard_div").hide();
-$('#infobtn').click(function(){
-  $("#dashboard_div").toggle();
-});
+// $('#infobtn').click(function(){
+//   $("#dashboard_div").toggle();
+// });
 // $(document).ready(function(){
 //   $('#infobtn').click(function(){
 //     $('#dashboard_div').show();
@@ -213,6 +211,7 @@ $('#infobtn').click(function(){
 //   $('.close').click(function(){
 //     $('#dashboard_div').hide();
 //   });
+
 // });
 
 
