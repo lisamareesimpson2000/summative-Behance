@@ -11,6 +11,14 @@
   height: 500px;
 }
 
+<<<<<<< HEAD
+=======
+img {
+  width: 200px;
+  height: 20% px;
+}
+
+>>>>>>> lisa
 .resize {
   width: 250px;
   height: 600px;
@@ -30,17 +38,42 @@
 
 #holder {
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: #0396a6;
+  display: flex;
 }
 
+<<<<<<< HEAD
 .buttons {
+=======
+.cont__buttons {
   width: 100%;
+  position: relative;
+  display: inline-block;
+  display: flex;
+}
+
+.btn {
+  background-color: #04adbf !important;
+  border-color: #025e73 !important;
+>>>>>>> lisa
+  width: 100%;
+  height: 60px;
+  font-size: 1.4em;
   font-family: "Amaranth", regular;
+<<<<<<< HEAD
   padding-left: 95px;
   padding-top: 25px;
   font-size: 24px;
   margin-left: 40%;
+=======
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #1a283e !important;
+  border-color: #ffffff;
+>>>>>>> lisa
 }
 
 .big-btn {
@@ -63,14 +96,8 @@
 }
 /* FONTS */
 /*MAIN COLOURS */
-#desCont__grad {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(#04adbf, #1a283e);
-}
-
 #logo__behance {
-  width: 50%;
+  width: 100%;
   padding-top: 20px;
 }
 
@@ -83,15 +110,16 @@
 #footer__copy {
   font-family: "Amaranth", regular;
   color: #ffffff;
-  font-size: 0.6em;
+  font-size: 0.7em;
   padding-top: 40px;
 }
 
-#des__details {
+#section__list--designer {
   width: 100%;
   height: 300px;
 }
 
+<<<<<<< HEAD
 #barchart {
   width: 100%;
   height: 300px;
@@ -133,9 +161,12 @@
     content: "";
   }
 .section--lisa {
+=======
+.section__lisa {
+>>>>>>> lisa
   width: 100%;
-  height: 900px;
-  background-color: aqua;
+  height: 1150px;
+  background-image: linear-gradient(#04adbf, #1a283e);
 }
 
 .designer__h2--f {
@@ -144,17 +175,23 @@
   font-size: 1em;
   display: block;
   width: 100%;
-  height: 30px;
   text-align: center;
 }
 
 .img__shadow {
-  border: 1px solid;
+  border: 18px solid;
+  border-color: #04adbf;
+  border-style: ridge;
   box-shadow: 5px 10px 8px #1a283e;
   width: 200px;
   height: 200px;
   display: block;
   margin: auto;
+}
+
+.section__footer {
+  width: 100%;
+  background-color: #b5d3dd;
 }
 
 .pbyB {
@@ -179,30 +216,50 @@
   opacity: 1;
 }
 
-.user-row {
-  height: 300px;
-  width: 100%;
-  background-color: brown;
+.row__user {
+  height: auto;
 }
 
-.text-row {
-  height: 100px;
+.row__text {
+  height: 150px;
   width: 100%;
-  background-color: red;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
-.img-row {
+.row__img {
   height: 200px;
   width: 100%;
-  background-color: yellow;
   display: block;
   margin: auto;
+  padding-top: 10px;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 600px) {
+  #logo__behance {
+    width: 50%;
+  }
+
+  #footer__copy {
+    font-size: 1em;
+  }
+
+  .row__text {
+    height: 150px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  .row__img {
+    height: 200px;
+    width: 100%;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1100px) {
   #logo__behance {
     width: 40%;
   }
@@ -215,6 +272,39 @@
 
   #footer__copy {
     padding-top: 60px;
+  }
+
+  .section__lisa {
+    width: 100%;
+    height: 950px;
+  }
+
+  .row__user {
+    height: auto;
+    display: flex;
+  }
+
+  .row__img {
+    height: 300px;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 200px;
+  }
+
+  .row__text {
+    height: 300px;
+    width: 100%;
+    padding-left: 300px;
+  }
+
+  .designer__h2--f {
+    font-size: 1.6em;
+    width: 100%;
+    text-align: left;
+  }
+
+  .clearfix {
+    overflow: auto;
   }
 }
 
