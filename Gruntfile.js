@@ -1,13 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    jshint: {
-      files: ['Gruntfile.js', 'public/js/*.js'],
-      options: {
-        globals: {
-          jQuery: true
-        }
-      }
-    },
+ 
     watch: {
       files: ['public/**/*.*'],
       tasks: ['jshint']
@@ -15,7 +8,9 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'public/output.min.js': ['public/js/main.js']
+          'public/js/main.min.js': ['public/js/main.js']
+          // 'public/css/main.min.css': ['public/css/main.css']
+         
         }
       }
     },
@@ -27,6 +22,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'public/css',
+          src: ['main.css' ],
+          dest: 'public/css',
+          ext: '.min.css'
+        }]
+      }
+    },
+    imagemin: {
+      dynamic: {
+          files: [{
+              expand: true,
+              cwd: 'public/images',
+              src: ['**/*.{svg,png,jpg,gif}'],
+              dest: 'public/images'
+          }]
+      }
+  },
     validation: {
     
       files: {
@@ -38,24 +54,20 @@ module.exports = function(grunt) {
     //   separator: ';',
     // },
     dist: {
-      src: ['public/js/lisa.js', 'public/js/lexi.js', 'public/js/joon.js'],
+    src: [ 'public/js/lexi.js','public/js/lisa.js','public/js/joon.js'],
+      //src: [ 'public/js/lexi.js'],
       dest: 'public/js/main.js',
     },
   },
-  connect: {
-    server: {
-      options: {
-        port: 5000,
-        hostname: 'localhost',
-        onCreateServer: function(server, connect, options) {
-          var io = require('socket.io').listen(server);
-          io.sockets.on('connection', function(socket) {
-          });
-        }
+  jshint: {
+    files: ['Gruntfile.js', 'public/js/*.js'],
+    options: {
+      globals: {
+        jQuery: true
       }
     }
   }
-
+  
 
   });
   
@@ -65,9 +77,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html-validation');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    
 
 
-  grunt.registerTask('default', ['sass', 'concat', 'jshint', 'watch', 'uglify', 'validation']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'imagemin', 'validation', 'watch', 'jshint']);
 
 };
