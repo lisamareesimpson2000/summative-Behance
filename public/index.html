@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
 
@@ -26,7 +24,7 @@
                     </div>
                     <div id="holder">
                         <div class="cont__buttons">
-                            <button id="show__section--joon" class="btn btn-primary big-btn pointer" id="infobtn" data-toggle="modal" data-target="#myModal">Our Work</button>
+                            <button id="show__section--joon" class="btn btn-primary big-btn pointer">Our Work</button>
                             <button id="show__section--lisa" class="btn btn-primary pointer" type="button">Our people</button>
                         </div>
                     </div>
@@ -34,31 +32,37 @@
             <!--HOMEPAGE-->
             <!-- <div class="row"></div> -->
   
-   <!--SECTION 2 - LEXI-->
-    <!-- <div id="lexi" class="section section--lexi"> 
-        -->
-<!-- 
-         <div id="myModal" > -->
-          <!-- <div class="modal-dialog modal-lg myModal"> -->
-                <!-- Modal content-->
-            <!--  <div class="modal-content myModalContent">
-                    <div class="modal-header"> 
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">User Statistics</h4>
-                    </div>
-                    <div class="modal-body"> -->
-                         <!-- <div id="dashboard_div"> 
-                          <div class="col-xs-4 col-sm-12 col-lg-4" id="filter_div"></div>
-                                <div class="col-xs-4 col-sm-12 col-lg-4" id="piechart"></div>
-                                <div class="col-xs-4 col-sm-12 col-lg-4" id="barchart" ></div>
-                              
-                              </div>  
+<!--SECTION 2 - LEXI-->
+          <!--  <div id="lexi" class="section section--lexi"> -->
+              <div id="myModal" class="modal fade" role="dialog" >
+                  <div class="modal-dialog modal-lg">
+                      <!-- Modal content-->
+                     <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">User Statistics</h4>
+                          </div>
+                          <div class="modal-body">
+
+
+                              <!--  <div id="myModal" class="modal" title="graph">
+          <span class="close">&times;</span>-->
+          <div id="dashboard_div">
+
+
+                                      <div class="col-xs-4 col-sm-12 col-lg-4" id="filter_div"></div>
+                                      <div class="col-xs-4 col-sm-12 col-lg-4" id="piechart"></div>
+                                      <div class="col-xs-4 col-sm-12 col-lg-4" id="barchart" ></div>
+                                  </div>
+
+       <!--  </div> -->
+
+                          </div>
                       </div>
-                </div>
-             </div> -->
-       <!-- </div> -->
-     <!-- </div>  -->
-    <!--LEXI-->
+                  </div>
+              </div>
+          <!-- </div> -->
+          <!--LEXI-->
 
             <!--SECTION 3 - LISA-->
             <div id="lisa" class="section__lisa">
@@ -80,10 +84,12 @@
              <div id="joon" class="section section--joon">
               <div class="row" align="center">
 
-                  <div class="" style="background:pink;" id="behance-project">
+                  <div class="" style="background: 04adbf;" id="behance-project">
                     <!-- <img class="img-responsive" id="ProjectCovers"> -->
+                    <button id="infobtn" data-toggle="modal" data-target="#myModal" >Designer 1</button>
+                  
                     <div id="userContainer1">
-
+                      
                     </div>
                     <div id="userContainer2">
 
@@ -119,11 +125,12 @@
    <!-- MASTER CONTAINER -->
 
    <!-- SCRIPT -->
-   <script
+   <!-- <script
   src="https://code.jquery.com/jquery-3.4.0.min.js"
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
+  <script src="/jquery" ></script>
+<script rel="stylesheet" type="text/css" media="screen" href="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/main.js"></script>
   </body>

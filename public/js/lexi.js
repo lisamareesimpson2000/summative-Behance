@@ -1,7 +1,7 @@
 var Desname = ["matiascorea" , "lucaviola" , "raewynbrandon"];
 var stats = [
     {
-        "first_name": "bob" ,
+        "first_name": "" ,
         "followers": 653 ,
         "following": 7554,
         "appreciations": 13644,
@@ -9,16 +9,16 @@ var stats = [
         "comments": 100
     },
     {
-        "first_name": "mia" ,
-        "followers": 555 ,
+        "first_name": "" ,
+        "followers": 755 ,
         "following": "",
         "appreciations": "",
         "views": "",
         "comments": ""
     },
     {
-        "first_name": "lexi" ,
-        "followers":554 ,
+        "first_name": "" ,
+        "followers": 554 ,
         "following": "",
         "appreciations": "",
         "views": "",
@@ -26,15 +26,15 @@ var stats = [
     }
 ];
 
-var j = 0;
-for ( var i = 0 ; i < Desname.length; i++) {
-    console.log(Desname[i]);
-
+var jlexi = 0;
+for ( var ilexi = 0 ; ilexi < Desname.length; ilexi++) {
+    
+//const j=i;
 
 $.ajax({
         
         dataType: 'jsonp',
-        url: 'http://behance.net/v2/users/' + Desname[i] + '?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
+        url: 'http://behance.net/v2/users/' + Desname[ilexi] + '?api_key=JoI9j5mk8tEfLB81PQeEMKhDSTjVNewT',
         type: 'GET',
         async: false,
         success: function (apiData) {
@@ -43,16 +43,19 @@ $.ajax({
             console.log(apiData.user.stats.followers);
             // followers.push(apiData.user.stats.followers);
             // console.log(followers);
-            stats[j].first_name = apiData.user.first_name;
-            stats[j].followers = apiData.user.stats.followers;
-            stats[j].following = apiData.user.stats.following;
-            stats[j].appreciations = apiData.user.stats.appreciations;
-            stats[j].views = apiData.user.stats.views;
-            stats[j].comments = apiData.user.stats.comments;
-            //return(apiData.user.stats.followers);
-            console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
-            console.log(j);
-    j += 1;        
+            stats[jlexi].first_name = apiData.user.first_name;
+            stats[jlexi].followers = apiData.user.stats.followers;
+            stats[jlexi].following = apiData.user.stats.following;
+            stats[jlexi].appreciations = apiData.user.stats.appreciations;
+            stats[jlexi].views = apiData.user.stats.views;
+            stats[jlexi].comments = apiData.user.stats.comments;
+            // return(apiData.user.stats.followers);
+            // console.log(stats[j].first_name,stats[j].followers, stats[j].following, stats[j].appreciations, stats[j].views, stats[j].comments);
+            // console.log(j);
+    jlexi+=1;
+
+
+        
             
 
 
@@ -63,21 +66,18 @@ $.ajax({
         }
     });
 }
-google.charts.load('current', {'packages':['corechart', 'controls']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  var data = new google.visualization.DataTable();
-    data.addColumn('string','Name');
-    data.addColumn('number','Followers');
-      for (var i = 0; i < stats.length; i++) {
-        console.log(stats[i].first_name, stats[i].followers)
-        data.addRow([
-          stats[i].first_name,
-          stats[i].followers
-        ]);
-      } //arraytodatatable
-
+google.charts.load('current', {'packages':['corechart', 'controls']
+}).then (function(){
+  $("#myModal").on('shown.bs.modal',function(){
+    var data = new google.visualization.DataTable();
+      data.addColumn('string','Name');
+       data.addColumn('number','Followers');
+       for (var ilexi = 0; ilexi < stats.length; ilexi++) {
+          data.addRow([
+                    stats[ilexi].first_name,
+                    stats[ilexi].followers
+                    ]);
+          } //arraytodatatable
 var options = {
 title: 'behance followers',
 chartArea:{
@@ -91,13 +91,23 @@ pieSliceBorderColor:  '#b5d3dd',
 backgroundColor: {
   fill: 'blue'
 }
-};
+};//options
 
 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
 chart.draw(data, options);
 singleDesigner();
-}
+})
+
+  })
+
+// google.charts.setOnLoadCallback(drawChart);
+
+
+
+
+
+
 
 
 function singleDesigner() {
@@ -142,19 +152,33 @@ dashboard.bind(donutRangeSlider, barChart);
 
 dashboard.draw(data);
 }
-// document.getElementById("dashboard_div").style.display="none";
-// document.getElementById("infobtn").addEventListener('click',function(){
-//   document.getElementById("dashboard_div").style.display="block";
-// });
-// $("#dashboard_div").hide();
-// $('#infobtn').click(function(){
-//   $("#dashboard_div").toggle();
-// });
-// $(document).ready(function(){
-//   $('#infobtn').click(function(){
-//     $('#dashboard_div').show();
-//   });
-//   $('.close').click(function(){
-//     $('#dashboard_div').hide();
-//   });
-// });
+
+// var modal = document.getElementById("myModal");
+
+// var btn= document.getElementById("infobtn");
+
+// var span = document.getElementsByClassName("close")[0];
+
+// btn.onclick=function(){
+//   modal.style.display="block";
+// }
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
+
+$(document).ready(function(){
+  $('#infobtn').click(function(){
+    $('#myModal').show();
+    $('#dashboard_div').show();
+  });
+  $('.close').click(function(){
+    $('#myModal').hide();
+    $('#dashboard_div').hide();
+  });
+});
+/*$('#infobtn').on('click', function() {
+  $("#myModal").css({
+    'z-index': 1050
+  }).modal('show');
+});
+*/

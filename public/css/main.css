@@ -40,7 +40,6 @@ img {
   display: flex;
 }
 
-
 .cont__buttons {
   width: 100%;
   position: relative;
@@ -61,7 +60,6 @@ img {
   color: #ffffff;
   background-color: #1a283e !important;
   border-color: #ffffff;
-
 }
 
 /* FONTS */
@@ -76,12 +74,10 @@ img {
   text-align: center;
 }
 
-
 #filter_div {
   width: 100%;
   height: 100px;
 }
-
 
 .myModal {
   width: 100%;
@@ -94,31 +90,6 @@ img {
 }
 
 #piechart {
-
-
-}
-/* FONTS */
-/*MAIN COLOURS */
-#logo__behance {
-  width: 100%;
-  padding-top: 20px;
-}
-
-#footer--lisa {
-  width: 100%;
-  height: 100px;
-  background-color: #b5d3dd;
-}
-
-#footer__copy {
-  font-family: "Amaranth", regular;
-  color: #ffffff;
-  font-size: 0.7em;
-  padding-top: 40px;
-}
-
-#section__list--designer {
-
   width: 100%;
   height: 300px;
 }
@@ -194,8 +165,7 @@ img {
   height: 300px;
 }
 
-
-.section--lisa {
+.section__lisa {
   width: 100%;
   height: 1150px;
   background-image: linear-gradient(#04adbf, #1a283e);
@@ -338,6 +308,7 @@ img {
   .clearfix {
     overflow: auto;
   }
+}
 #behance-project {
   width: 100%;
   height: 900px;
@@ -371,7 +342,6 @@ img {
   height: 300px;
   float: left;
   padding: 2px;
-}
 }
 
 @media only screen and (max-width: 800px) {
