@@ -81,7 +81,7 @@ google.charts.load('current', {'packages':['corechart', 'controls']
 var options = {
 title: 'behance followers',
 chartArea:{
-  left:80,
+  left:10,
   'width': 500,
   'height': 300
 },
