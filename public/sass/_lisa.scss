@@ -51,18 +51,29 @@
   }
 
   //HOMEPAGE INFO WINDOW
-  .icon--info{
+  .cont__icon--info {
     width: 100%;
     height: 20px;
-    font-size: 2em;
-    font-weight: bold;
     padding: 10px;
     display: inline-block;
     text-align: right;
   }
 
-  .fa-info-circle{
-    color: $wht;
+  .fa-info-circle {
+    color: $dark;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  //MODAL 
+  .modal__info--content {
+    width: 100%;
+    height: 200px;
+    background-color: $pale;
+    padding: 10px;
+  }
+  .modal__info--text {
+    text-align: center;
   }
  // FOOTER
  .section__footer {
@@ -130,18 +141,18 @@
 
 
     //HOMEPAGE INFO WINDOW
-    .icon--info{
+    .cont__icon--info{
       width: 100%;
       height: 20px;
-      font-size: 2em;
-      font-weight: bold;
       padding: 10px;
       display: inline-block;
       text-align: right;
     }
   
     .fa-info-circle{
-      color: $wht;
+      color: $dark;
+      font-size: 2em;
+      font-weight: bold;
     }
 
 } 
@@ -191,20 +202,19 @@
   }
 
   //HOMEPAGE INFO WINDOW
-  .icon--info{
+  .cont__icon--info{
     width: 100%;
     height: 20px;
-    // font-size: 2em;
-    // font-weight: bold;
     padding: 40px;
     display: inline-block;
     text-align: right;
-    background-color: $dark;
   }
 
   .fa-info-circle{
-    color: $wht;
+    color: $dark;
     font-size: 2em;
+    font-size: 2em;
+    font-weight: bold;
   }
 
 }
