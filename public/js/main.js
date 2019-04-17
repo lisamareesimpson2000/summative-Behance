@@ -216,7 +216,7 @@ $(document).ready(function(){
     // });
 
 });
-//Modal - INFO
+//MODAL HOMEPAGE - INFO
 
 var iconInfo = document.getElementById("i__info");
 var i_modal;
@@ -261,7 +261,7 @@ $.ajax({
         console.log(behance_data.user.twitter);
         console.log(behance_data.user.images[138]);
         document.getElementById("section__list--designer").innerHTML+= '<div class="row__user"><div class="row__text"><h2 class="designer__h2--f">' + behance_data.user.first_name + ' ' + behance_data.user.last_name +'</h2>' + 
-        '<h2 class="designer__h2--f">' + behance_data.user.occupation + '</h2>' + '<h2 class="designer__h2--f">' + behance_data.user.location +'</h2></div>' + 
+        '<h2 class="designer__h2--f">' + behance_data.user.occupation + '</h2>' + '<h2 class="designer__h2--f">' + behance_data.user.location + '</h2>' + '<h2 class="designer__h2--f">' + "Twitter: " + behance_data.user.twitter + '</h2></div>' + 
         '<div class="row__img"><img class="rounded-circle ridge img__shadow clearfix" src = "' + behance_data.user.images[138] + '" alt="profile photo"></div></div>'+'<br>';
     },
     error: function (error) {
