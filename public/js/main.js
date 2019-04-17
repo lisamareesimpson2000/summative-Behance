@@ -81,16 +81,12 @@ google.charts.load('current', {'packages':['corechart', 'controls']
 var options = {
 title: 'behance followers',
 chartArea:{
-  left:80,
-  top:5,
-  width:'70%',
-  height:'90%'
+  // left:80,
+  // top:5,
+  'width': 500,
+  'height': 300
 },
-is3D: true, 
 pieSliceBorderColor:  '#b5d3dd',
-backgroundColor: {
-  fill: 'blue'
-}
 };//options
 
 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -99,12 +95,7 @@ chart.draw(data, options);
 singleDesigner();
 })
 
-  })
-
-// google.charts.setOnLoadCallback(drawChart);
-
-
-
+})
 
 
 

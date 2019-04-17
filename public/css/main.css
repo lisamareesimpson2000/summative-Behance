@@ -79,16 +79,6 @@ img {
   height: 100px;
 }
 
-.myModal {
-  width: 100%;
-  background: yellow;
-}
-
-.myModalContent {
-  width: 100%;
-  background: green;
-}
-
 #piechart {
   width: 100%;
   height: 300px;
