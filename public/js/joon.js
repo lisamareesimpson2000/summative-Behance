@@ -34,11 +34,7 @@ var userContainer3 = $("#userContainer3");
 
             userContainer1.append('<div id="project2"></div>');
               var projContainer2 = document.getElementById('project2');
-<<<<<<< HEAD
-                  projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-=======
                   projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
->>>>>>> joon
                   projContainer2.innerHTML +=('<div class="project__item">'+project.name+'</div>');
                   projContainer2.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
@@ -48,11 +44,7 @@ var userContainer3 = $("#userContainer3");
               userContainer1.append('<div id="project3"></div>');
               var projContainer3 = document.getElementById('project3');
                   projContainer3.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
-<<<<<<< HEAD
-                  projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-=======
                   projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>');
->>>>>>> joon
                   projContainer3.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
               console.log(projContainer3);
@@ -117,11 +109,7 @@ if (j>0){
                 var projContainer6 = document.getElementById('project6');
                     projContainer6.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
                     projContainer6.innerHTML +=('<div class="project__item">'+project.name+'</div>');
-<<<<<<< HEAD
-                    projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
-=======
                     projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
->>>>>>> joon
 
                 console.log(projContainer6);
               }

@@ -81,8 +81,7 @@ google.charts.load('current', {'packages':['corechart', 'controls']
 var options = {
 title: 'behance followers',
 chartArea:{
-  // left:80,
-  // top:5,
+  left:80,
   'width': 500,
   'height': 300
 },
@@ -308,7 +307,7 @@ var userContainer3 = $("#userContainer3");
 
             userContainer1.append('<div id="project2"></div>');
               var projContainer2 = document.getElementById('project2');
-                  projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
+                  projContainer2.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
                   projContainer2.innerHTML +=('<div class="project__item">'+project.name+'</div>');
                   projContainer2.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
@@ -318,7 +317,7 @@ var userContainer3 = $("#userContainer3");
               userContainer1.append('<div id="project3"></div>');
               var projContainer3 = document.getElementById('project3');
                   projContainer3.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
-                  projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>')
+                  projContainer3.innerHTML +=('<div class="project__item">'+project.name+'</div>');
                   projContainer3.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
               console.log(projContainer3);
@@ -383,7 +382,7 @@ if (j>0){
                 var projContainer6 = document.getElementById('project6');
                     projContainer6.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
                     projContainer6.innerHTML +=('<div class="project__item">'+project.name+'</div>');
-                    projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                    projContainer6.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
                 console.log(projContainer6);
               }
@@ -435,11 +434,11 @@ if (j>0){
 
                 } else if (l==1){
 
-                userContainer3.append('<div id="project8"></div>')
-                  var projContainer8 = document.getElementById('project8')
-                      projContainer8.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>')
-                      projContainer8.innerHTML +=('<div class="project__item">'+project.name+'</div>')
-                      projContainer8.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>')
+                userContainer3.append('<div id="project8"></div>');
+                  var projContainer8 = document.getElementById('project8');
+                      projContainer8.innerHTML +=('<div class="project__item">'+project.owners[0].first_name + " " + project.owners[0].last_name+'</div>');
+                      projContainer8.innerHTML +=('<div class="project__item">'+project.name+'</div>');
+                      projContainer8.innerHTML +=('<div class="img__item">' + '<img class="shadow-float" src= '+ project.covers[404] +' >'+'</div>');
 
                   console.log(projContainer8);
 
