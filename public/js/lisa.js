@@ -73,7 +73,7 @@ console.log(desName);
 //const j=i;
 $.ajax({
     dataType: 'jsonp',
-    url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=n8cdQnwhaNoOOeV04JAR1P3Uhz7PQ8p7',
+    url: 'https://api.behance.net/v2/users/'+ desName[i] +'?client_id=',
     type: 'GET',
     async: false,
     success: function (behance_data) {
